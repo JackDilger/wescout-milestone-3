@@ -12,9 +12,9 @@
 <body>
     <header>
         <!--Nav bar-->
-        <nav>
+        <nav class="grey darken-3">
             <div class="nav-wrapper">
-              <a href="{{ url_for('home') }}" class="brand-logo">Wescout</a>
+              <a href="{{ url_for('home') }}" class="brand-logo"><i class="fa-solid fa-clipboard-user hide-on-small-and-down"></i>Wescout</a>
               <a href="#" data-target="mobile-demo" class="sidenav-trigger"><i class="fa-solid fa-bars"></i></i></a>
               <ul class="right hide-on-med-and-down">
                 <li><a href="">Home</a></li>
@@ -31,30 +31,29 @@
           </ul>
     </header>
 
-
     <main class="container">
         {% block content %}
         {% endblock %}
     </main>
 
-    <footer class="page-footer">
-        <div class="container">
-          <div class="row">
-            <div class="col l6 s12">
-              <h5 class="white-text">Follow us for updates</h5>
-            </div>
-            <div class="col l4 offset-l2 s12">
-              <ul>
-                <li><a class="grey-text text-lighten-3" href="#!">Facebook</a></li>
-                <li><a class="grey-text text-lighten-3" href="#!">Twitter</a></li>
-                <li><a class="grey-text text-lighten-3" href="#!">Instagram</a></li>
-              </ul>
-            </div>
+    
+    <footer class="page-footer grey darken-3 center-align">
+      <div class="container">
+        <div class="row">
+          <div>
+            <h5 class="white-text">Digitize your player management</h5>
+            <p class="grey-text text-lighten-4">
+              Capture all your player data on our secure database. For professional scouting & individual player management.</p>
           </div>
         </div>
-      </footer>
+      </div>
+      <div class="footer-copyright">
+        <div class="container">
+          Copyright©2022 | Jack Dilger | All rights reserved
+        </div>
+      </div>
+    </footer>
 
-    
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
     <script src="{{ url_for('static', filename='js/script.js') }}"></script>
