@@ -9,12 +9,12 @@
                 <strong>{{ player.player_name }}</strong> : {{ player.domestic_club }}
             </div>
             <div class="collapsible-body grey darken-3">
-                <strong>{{ player.player_rating }}</strong>
-                <p>{{ player.player_age }}</p>
-                <p>{{ player.preferred_foot }}</p>
-                <p>{{ player.national_team }}</p>
-                <p>{{ player.market_value }}</p>
-                <p>{{ player.player_notes }}</p>
+                <strong>Rating: {{ player.player_rating }}</strong>
+                <p>Age: {{ player.player_age }}</p>
+                <p>Preferred Foot: {{ player.preferred_foot }}</p>
+                <p>National Team: {{ player.national_team }}</p>
+                <p>Market Value: {{ player.market_value }}</p>
+                <p>Player Notes: {{ player.player_notes }}</p>
             </div>
         </li>
         {% endfor %}
