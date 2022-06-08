@@ -10,6 +10,7 @@ body {
     background-repeat: no-repeat;
     background-size: cover;
     font-family: 'Roboto', sans-serif;
+    color: white;
   }
 
   main {
@@ -21,7 +22,11 @@ body {
       font-family: 'Fredoka One', cursive;
   }
 
-  .fa-clipboard-user{
+  i{
     font-size: 35px;
     color: #3FE10E;
   }
+
+  .fa-clipboard-user{
+    font-size: 35px;
+  } 

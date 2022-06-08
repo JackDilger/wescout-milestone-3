@@ -2,9 +2,10 @@ document.addEventListener("DOMContentLoaded", function() {
     //Initialize sidenav
     let sidenav = document.querySelectorAll(".sidenav");
     M.Sidenav.init(sidenav);
+
+    // collapsible initializataion
+    let collapsibles = document.querySelectorAll(".collapsible");
+    M.Collapsible.init(collapsibles);
+
 }); 
 
-document.addEventListener('DOMContentLoaded', function() {
-    var elems = document.querySelectorAll('.collapsible');
-    var instances = M.Collapsible.init(elems, options);
-  });
