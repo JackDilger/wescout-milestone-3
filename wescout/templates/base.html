@@ -9,16 +9,31 @@
     <title>Wescout</title>
 </head>
 <body>
-    We scout!
-
-
-
-
-
+    <header>
+        <!--Nav bar-->
+        <nav>
+            <div class="nav-wrapper">
+              <a href="{{ url_for('home') }}" class="brand-logo">Wescout</a>
+              <a href="#" data-target="mobile-demo" class="sidenav-trigger"><i class="material-icons">menu</i></a>
+              <ul class="right hide-on-med-and-down">
+                <li><a href="">Home</a></li>
+                <li><a href="">Add Player</a></li>
+                <li><a href="">Regions</a></li>
+              </ul>
+            </div>
+          </nav>
+          <!--Hamburger navbar for small screens-->
+          <ul class="sidenav" id="mobile-demo">
+            <li><a href="{{ url_for('home') }}">Home</a></li>
+            <li><a href="">Add Player</a></li>
+            <li><a href="">Regions</a></li>
+          </ul>
+    </header>
+    
 
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
     <script src="{{ url_for('static', filename='js/script.js') }}"></script>
-     
+
 </body>
 </html>
