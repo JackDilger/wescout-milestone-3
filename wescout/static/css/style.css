@@ -1,3 +1,16 @@
+@import url('https://fonts.googleapis.com/css2?family=Fredoka+One&family=Roboto&display=swap');
+
+body {
+    display: flex;
+    min-height: 100vh;
+    flex-direction: column;
+    background-image: url(../images/wescout-background-image.jpg);
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    font-family: 'Roboto', sans-serif;
+  }
 
   main {
     flex: 1 0 auto;
@@ -5,6 +18,7 @@
 
   nav .brand-logo {
       margin-left: 10px;
+      font-family: 'Fredoka One', cursive;
   }
 
   .fa-clipboard-user{
