@@ -6,6 +6,8 @@ from wescout.models import Region, Users
 
 
 @app.route("/")
-def home():
-    return render_template("players.html")
+@app.route("/get_players")
+def get_players():
+    players = list(mongo.db.players.find())
+    return render_template("players.html", players=players)
 
