@@ -28,3 +28,10 @@ def add_region():
     return render_template("add_region.html")
 
 
+@app.route("/edit_region/<int:region_id>", methods=["GET", "POST"])
+def edit_region(region_id):
+    region = Region.query.get_or_404(region_id)
+    return render_template("edit_region.html", region=region)
+    
+
+
