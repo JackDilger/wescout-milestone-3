@@ -30,3 +30,12 @@ body {
   .fa-clipboard-user{
     font-size: 35px;
   } 
+
+  h3 {
+    text-shadow: 1px 1px 10px #000;
+    font-family: 'Fredoka One', cursive;
+  }
+
+  h3 span {
+    background-color: #50616161;
+  }
