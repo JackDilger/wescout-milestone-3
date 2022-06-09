@@ -37,6 +37,13 @@ def edit_region(region_id):
         return redirect(url_for("regions"))
     return render_template("edit_region.html", region=region)
 
+
+@app.route("/delete_region/<int:region_id>")
+def delete_region(region_id):
+    region = Region.query.get_or_404(region_id)
+    db.session.delete(region)
+    db.session.commit()
+    return redirect(url_for("regions"))
     
 
 
