@@ -31,7 +31,15 @@ def add_region():
 @app.route("/edit_region/<int:region_id>", methods=["GET", "POST"])
 def edit_region(region_id):
     region = Region.query.get_or_404(region_id)
+    if request.method == "POST":
+        region.region_name = request.form.get("region_name")
+        db.session.commit()
+        return redirect(url_for("regions"))
     return render_template("edit_region.html", region=region)
+
     
+
+
+
 
 
