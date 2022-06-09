@@ -17,8 +17,13 @@ def region():
     return render_template("region.html")
 
 
-@app.route("/add_region")
+@app.route("/add_region", methods=["GET", "POST"])
 def add_region():
+    if request.method == "POST":
+        region = Region(region_name=request.form.get("region_name"))
+        db.session.add(region)
+        db.session.commit()
+        return redirect(url_for("region"))
     return render_template("add_region.html")
 
 
