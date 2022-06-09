@@ -16,3 +16,9 @@ def get_players():
 def region():
     return render_template("region.html")
 
+
+@app.route("/add_region")
+def add_region():
+    return render_template("add_region.html")
+
+
