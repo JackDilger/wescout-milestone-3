@@ -43,8 +43,10 @@ def delete_region(region_id):
     region = Region.query.get_or_404(region_id)
     db.session.delete(region)
     db.session.commit()
+    mongo.db.players.delete_many({"region_id": str(region_id)})
     return redirect(url_for("regions"))
-    
+
+
 
 
 
