@@ -39,3 +39,12 @@ body {
   h3 span {
     background-color: #50616161;
   }
+
+  #delete-region-btn:hover {
+    border: 2px solid white;
+  }
+
+  #edit-region-btn:hover {
+    border: 2px solid white;
+  }
+

@@ -5,7 +5,7 @@
 
 <div class="row">
     <div class="col s12 center-align">
-        <a href="{{ url_for('add_region') }}" class="btn-large grey darken-3">
+        <a href="{{ url_for('add_region') }}" id="add-region-btn" class="btn-large grey darken-3">
             Add Region <i class="fa-solid fa-circle-plus"></i>
         </a>
     </div>
@@ -20,8 +20,8 @@
                 <span class="card-title">{{ region.region_name }}</span>
             </div>
             <div class="card-action">
-                <a href="{{ url_for('edit_region', region_id=region.id) }}" class="btn green accent-4">Edit</a>
-                <a href="{{ url_for('delete_region', region_id=region.id) }}" class="btn red">Delete</a>
+                <a href="{{ url_for('edit_region', region_id=region.id) }}" id="edit-region-btn" class="btn green accent-4">Edit</a>
+                <a href="{{ url_for('delete_region', region_id=region.id) }}" id="delete-region-btn" class="btn red">Delete</a>
             </div>
         </div>
     </div>
