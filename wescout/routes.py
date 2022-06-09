@@ -11,3 +11,8 @@ def get_players():
     players = list(mongo.db.players.find())
     return render_template("players.html", players=players)
 
+
+@app.route("/region")
+def region():
+    return render_template("region.html")
+
