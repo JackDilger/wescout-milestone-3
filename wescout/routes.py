@@ -12,9 +12,10 @@ def get_players():
     return render_template("players.html", players=players)
 
 
-@app.route("/region")
-def region():
-    return render_template("region.html")
+@app.route("/regions")
+def regions():
+    regions = list(Region.query.order_by(Region.region_name).all())
+    return render_template("regions.html", regions=regions)
 
 
 @app.route("/add_region", methods=["GET", "POST"])
@@ -23,7 +24,7 @@ def add_region():
         region = Region(region_name=request.form.get("region_name"))
         db.session.add(region)
         db.session.commit()
-        return redirect(url_for("region"))
+        return redirect(url_for("regions"))
     return render_template("add_region.html")
 
 
