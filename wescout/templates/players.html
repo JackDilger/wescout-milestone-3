@@ -5,9 +5,20 @@
         {% for player in players %}
         <li>
             <div class="collapsible-header grey darken-2">
-                <i class="fa-solid fa-circle-down"></i>
-                <strong>{{ player.player_name }}</strong> : {{ player.domestic_club }}
+
+                <div class="col-md-3">
+                    <i class="fa-solid fa-circle-down"></i>
+                    <a href="" class="btn-small green accent-4">Edit</a>
+                    <a href="" class="btn-small red">Delete</a>
+                    
+                </div>
+
+                <div class="col-md-9">
+                    <strong>{{ player.player_name }}</strong> : {{ player.domestic_club }} 
+                </div>  
+
             </div>
+        
             <div class="collapsible-body grey darken-3">
                 <strong>Rating: {{ player.player_rating }}</strong>
                 <p>Age: {{ player.player_age }}</p>

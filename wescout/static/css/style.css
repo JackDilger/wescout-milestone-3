@@ -64,7 +64,6 @@ body {
     color: #3FE10E;
   }
 
-
   .select-wrapper input.select-dropdown {
     color: white;
     }
@@ -80,6 +79,19 @@ body {
   .sidenav {
     background-color: #757575;
   }
+
+  .btn-small:hover {
+    border: 2px solid white;
+  }
+
+  .btn-small {
+    margin: 5px;
+}
+
+.collapsible-header {
+    margin: 5px;
+    line-height: 42px;
+}
 
 
 
