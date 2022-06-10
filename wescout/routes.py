@@ -47,6 +47,10 @@ def delete_region(region_id):
     return redirect(url_for("regions"))
 
 
+@app.route("/add_player")
+def add_player():
+    return render_template("add_player.html")
+
 
 
 

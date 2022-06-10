@@ -18,7 +18,7 @@
               <a href="#" data-target="mobile-demo" class="sidenav-trigger"><i class="fa-solid fa-bars"></i></i></a>
               <ul class="right hide-on-med-and-down">
                 <li><a href="{{ url_for('get_players') }}" class="nav-link">Players</a></li>
-                <li><a href="" class="nav-link">Add Player</a></li>
+                <li><a href="{{ url_for('add_player') }}" class="nav-link">Add Player</a></li>
                 <li><a href="{{ url_for('regions') }}" class="nav-link">Regions</a></li>
               </ul>
             </div>
@@ -26,7 +26,7 @@
           <!--Hamburger navbar for small screens-->
           <ul class="sidenav" id="mobile-demo">
             <li><a href="{{ url_for('get_players') }}">Players</a></li>
-            <li><a href="">Add Player</a></li>
+            <li><a href="{{ url_for('add_player') }}">Add Player</a></li>
             <li><a href="{{ url_for('regions') }}">Regions</a></li>
           </ul>
     </header>
