@@ -5,6 +5,23 @@
 
     <div class="row card-panel grey darken-2">
         <form class="col s12" method="POST" action="">
+
+            <div class="row">
+				<div class="input-field col s12">
+                <i class="fa-solid fa-earth-americas prefix"></i>
+                <select id="region_id" name="region_id" class="validate" required>
+                    <option value="" disabled selected>Choose Region</option>
+                    {% for region in regions %}
+                        <option value="{{ region.id }}">{{ region.region_name }}</option>
+                    {% endfor %}
+                </select>
+                <label for="region_id">Region</label>
+            </div>
+			</div>
+
+
+
+
             <div class="row">
                 <div class="input-field col s12">
                     <i class="fa-solid fa-circle-user prefix"></i>

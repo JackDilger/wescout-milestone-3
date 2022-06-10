@@ -49,10 +49,6 @@ def delete_region(region_id):
 
 @app.route("/add_player")
 def add_player():
-    return render_template("add_player.html")
-
-
-
-
-
-
+    regions = list(Region.query.order_by(Region.region_name).all())
+    return render_template("add_player.html", regions=regions)
+    
