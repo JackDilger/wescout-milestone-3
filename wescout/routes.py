@@ -47,8 +47,25 @@ def delete_region(region_id):
     return redirect(url_for("regions"))
 
 
-@app.route("/add_player")
+@app.route("/add_player", methods=["GET", "POST"])
 def add_player():
+    if request.method == "POST":
+        player = {
+            "region_id": request.form.get("region_id"),
+            "player_name": request.form.get("player_name"),
+            "player_age": request.form.get("player_age"),
+            "preferred_foot": request.form.get("preferred_foot"),
+            "national_team": request.form.get("national_team"),
+            "domestic_club": request.form.get("domestic_club"),
+            "player_rating": request.form.get("market_value"),
+            "market_value": request.form.get("market_value"),
+            "player_notes": request.form.get("player_notes") 
+        }
+        mongo.db.players.insert_one(player)
+        flash("Player Successfully Added")
+        return redirect(url_for("get_players"))
+
     regions = list(Region.query.order_by(Region.region_name).all())
     return render_template("add_player.html", regions=regions)
-    
+
+
