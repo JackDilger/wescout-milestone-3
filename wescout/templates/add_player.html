@@ -1,0 +1,75 @@
+{% extends "base.html" %}
+{% block content %}
+
+    <h3 class="center-align">Add Player</h3>
+
+    <div class="row card-panel grey darken-2">
+        <form class="col s12" method="POST" action="">
+            <div class="row">
+                <div class="input-field col s12">
+                    <i class="fa-solid fa-circle-user prefix"></i>
+                    <input id="player_name" name="player_name" minlength="5" maxlength="50"
+                        type="text" class="validate" required>
+                    <label for="player_name">Player Name</label>
+                </div>
+            </div>
+            <div class="row">
+                <div class="input-field col s12">
+                    <i class="fa-solid fa-pen-circle prefix"></i>
+                    <input id="player_age" name="player_age" minlength="5" maxlength="50"
+                        type="text" class="validate" required>
+                    <label for="player_age">Player Age</label>
+                </div>
+            </div>
+            <div class="row">
+                <div class="input-field col s12">
+                    <i class="fa-solid fa-shoe-prints prefix"></i>
+                    <input id="preferred_foot" name="preferred_foot" minlength="5" maxlength="50"
+                        type="text" class="validate" required>
+                    <label for="preferred_foot">Preffered Foot</label>
+                </div>
+            </div>
+			<div class="row">
+				<div class="input-field col s12">
+                    <i class="fa-solid fa-globe prefix"></i>
+                    <input id="national_team" name="national_team" minlength="5" maxlength="50"
+                        type="text" class="validate" required>
+                    <label for="national_team">National Team</label>
+				</div>
+			</div>
+            <div class="row">
+				<div class="input-field col s12">
+                    <i class="fa-solid fa-location-dot prefix"></i>
+                    <input id="domestic_club" name="domestic_club" minlength="5" maxlength="50"
+                        type="text" class="validate" required>
+                    <label for="domestic_club">Domestic Club</label>
+				</div>
+			</div>
+            <div class="row">
+				<div class="input-field col s12">
+                    <i class="fa-solid fa-circle-star prefix"></i>
+                    <input id="player_rating" name="player_rating" minlength="5" maxlength="50"
+                        type="text" class="validate" required>
+                    <label for="player_rating">Player Rating</label>
+				</div>
+			</div>
+            <div class="row">
+				<div class="input-field col s12">
+                    <i class="fa-solid fa-sack-dollar prefix"></i>
+                    <input id="market_value" name="market_value" minlength="5" maxlength="50"
+                        type="text" class="validate" required>
+                    <label for="market_value">Market Value</label>
+				</div>
+			</div>
+            <div class="row">
+				<div class="input-field col s12">
+                    <i class="fa-solid fa-comment-lines prefix"></i>
+                    <textarea id="player_notes" name="player_notes" minlength="5"
+                        maxlength="200" class="materialize-textarea validate" required></textarea>
+                    <label for="player_notes">Player Notes</label>
+				</div>
+			</div>
+        </form>
+    </div>
+
+{% endblock %}
