@@ -9,10 +9,10 @@
             <div class="row">
 				<div class="input-field col s12">
                 <i class="fa-solid fa-earth-americas prefix"></i>
-                <select id="region_id" name="region_id" class="validate white-text" required>
-                    <option value="" disabled selected>Choose Region</option>
+                <select id="region_name" name="region_id" class="validate white-text" required>
+                <option value="" disabled selected>Choose Region</option>
                     {% for region in regions %}
-                        <option value="{{ region.id }}">{{ region.region_name }}</option>
+                       <option value="{{ region.id }}">{{ region.region_name }}</option>
                     {% endfor %}
                 </select>
                 <label class="white-text" for="region_id">Region</label>

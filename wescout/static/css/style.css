@@ -60,4 +60,26 @@ body {
   }
 
 
+  .dropdown-content li>a, .dropdown-content li>span {
+    color: #3FE10E;
+  }
+
+
+  .select-wrapper input.select-dropdown {
+    color: white;
+    }
+
+  .sidenav li>a {
+    color: white;
+  }
+
+  .sidenav li>a:hover {
+    text-decoration: underline;
+  }
+
+  .sidenav {
+    background-color: #757575;
+  }
+
+
 
