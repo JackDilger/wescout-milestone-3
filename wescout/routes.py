@@ -73,6 +73,21 @@ def add_player():
 def edit_player(player_id):
 
     player = mongo.db.players.find_one({"_id": ObjectId(player_id)})
+        
+    if request.method == "POST":
+        submit = {
+            "region_id": request.form.get("region_id"),
+            "player_name": request.form.get("player_name"),
+            "player_age": request.form.get("player_age"),
+            "preferred_foot": request.form.get("preferred_foot"),
+            "national_team": request.form.get("national_team"),
+            "domestic_club": request.form.get("domestic_club"),
+            "player_rating": request.form.get("market_value"),
+            "market_value": request.form.get("market_value"),
+            "player_notes": request.form.get("player_notes") 
+        }
+        mongo.db.players.replace_one({"_id": ObjectId(player_id)}, submit)
+        flash("Player Successfully Updated")
 
     regions = list(Region.query.order_by(Region.region_name).all())
     return render_template("edit_player.html", player=player, regions=regions)
