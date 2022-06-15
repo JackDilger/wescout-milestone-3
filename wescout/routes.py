@@ -71,7 +71,8 @@ def add_player():
 
 @app.route("/edit_player/<player_id>", methods=["GET", "POST"])
 def edit_player(player_id):
-    player = mongo.db.tasks.find_one({"_id": ObjectId(player_id)})
+
+    player = mongo.db.players.find_one({"_id": ObjectId(player_id)})
 
     regions = list(Region.query.order_by(Region.region_name).all())
     return render_template("edit_player.html", player=player, regions=regions)
