@@ -24,6 +24,7 @@ def add_region():
         region = Region(region_name=request.form.get("region_name"))
         db.session.add(region)
         db.session.commit()
+        flash("Region Successfully Added")
         return redirect(url_for("regions"))
     return render_template("add_region.html")
 
@@ -44,6 +45,7 @@ def delete_region(region_id):
     db.session.delete(region)
     db.session.commit()
     mongo.db.players.delete_many({"region_id": str(region_id)})
+    flash("Region Successfully Deleted")
     return redirect(url_for("regions"))
 
 
