@@ -57,7 +57,7 @@ def add_player():
             "preferred_foot": request.form.get("preferred_foot"),
             "national_team": request.form.get("national_team"),
             "domestic_club": request.form.get("domestic_club"),
-            "player_rating": request.form.get("market_value"),
+            "player_rating": request.form.get("player_rating"),
             "market_value": request.form.get("market_value"),
             "player_notes": request.form.get("player_notes") 
         }
@@ -82,7 +82,7 @@ def edit_player(player_id):
             "preferred_foot": request.form.get("preferred_foot"),
             "national_team": request.form.get("national_team"),
             "domestic_club": request.form.get("domestic_club"),
-            "player_rating": request.form.get("market_value"),
+            "player_rating": request.form.get("player_rating"),
             "market_value": request.form.get("market_value"),
             "player_notes": request.form.get("player_notes") 
         }

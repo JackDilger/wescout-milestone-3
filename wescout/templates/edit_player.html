@@ -69,8 +69,15 @@
             <div class="row">
 				<div class="input-field col s12">
                     <i class="fa-solid fa-star prefix"></i>
-                    <input id="player_rating" name="player_rating" minlength="1" maxlength="50"
-                        value="{{ player.player_rating}}" type="text" class="validate white-text" required>
+                    <select id="player_rating" name="player_rating" class="validate white-text" required>
+                        <option value="" disabled>Choose Player Rating</option>
+                        <option value="{{ player.player_rating }}" disabled selected>{{ player.player_rating }}</option>
+                        <option value="1">1 Star</option>
+                        <option value="2">2 Star</option>
+                        <option value="3">3 Star</option>
+                        <option value="4">4 Star</option>
+                        <option value="5">5 Star</option>
+                    </select>
                     <label class="white-text" for="player_rating">Player Rating</label>
 				</div>
 			</div>
