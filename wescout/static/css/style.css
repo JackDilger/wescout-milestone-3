@@ -37,8 +37,10 @@ body {
   }
 
   h3 span {
-    background-color:  #50616161;;
+    background-color:  #50616161;
   }
+
+
 
   #delete-region-btn:hover {
     border: 2px solid white;
@@ -46,6 +48,18 @@ body {
 
   #edit-region-btn:hover {
     border: 2px solid white;
+  }
+
+  #confirm-delete-region-btn:hover {
+    border: 2px solid white;
+  }
+
+  #close-cancel-region-modal-btn:hover {
+    border: 2px solid white;
+  }
+
+  .modal .modal-footer {
+    text-align: center;
   }
 
 
