@@ -30,8 +30,8 @@
                         <p class="white-text">Deleting a region will delete all players associated to the region<br>and cannot be undone.</p>
                     </div>
                     <div class="modal-footer grey darken-3 center-align">
-                        <a href="{{ url_for('delete_region', region_id=region.id) }}" id="confirm-delete-region-btn" class="btn red">Confirm</a>
-                        <a href="{{ url_for('regions') }}" id="close-cancel-region-modal-btn" class="modal-close btn green accent -4">Cancel</a>
+                        <a href="{{ url_for('delete_region', region_id=region.id) }}" id="confirm-delete-modal-btn" class="btn red">Confirm</a>
+                        <a href="{{ url_for('regions') }}" id="close-modal-btn" class="modal-close btn green accent -4">Cancel</a>
                     </div>
                 </div>
 

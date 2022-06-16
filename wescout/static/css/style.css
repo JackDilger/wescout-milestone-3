@@ -50,11 +50,11 @@ body {
     border: 2px solid white;
   }
 
-  #confirm-delete-region-btn:hover {
+  #confirm-delete-modal-btn:hover {
     border: 2px solid white;
   }
 
-  #close-cancel-region-modal-btn:hover {
+  #close-modal-btn:hover {
     border: 2px solid white;
   }
 
