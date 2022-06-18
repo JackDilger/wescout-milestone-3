@@ -106,5 +106,10 @@ def delete_player(player_id):
     return redirect(url_for("get_players"))
 
 
+@app.route("/register", methods=["GET", "POST"])
+def register():
+    return render_template("register.html")
+
+
 
 
