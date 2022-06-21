@@ -141,7 +141,15 @@ def profile(username):
 
     return redirect(url_for("register"))
 
-    
+
+@app.route("/login", methods=["GET", "POST"])
+def login():
+
+    return render_template("login.html")
+
+
+
+
 
     
 
