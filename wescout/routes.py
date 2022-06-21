@@ -130,7 +130,7 @@ def register():
         flash("Registration Successful!")
         return redirect(url_for("profile", username=session["user"]))
 
-    return render_template("register.html")
+    return render_template("login.html")
 
 
 @app.route("/profile/<username>", methods=["GET", "POST"])
@@ -144,8 +144,33 @@ def profile(username):
 
 @app.route("/login", methods=["GET", "POST"])
 def login():
+    if request.method == "POST":
+
+        existing_user = Users.query.filter(Users.user_name == \
+                                           request.form.get("username").lower()).all()
+
+        if existing_user:
+            print(request.form.get("username"))
+      
+            if check_password_hash(
+                    existing_user[0].password, request.form.get("password")):
+                        session["user"] = request.form.get("username").lower()
+                        flash("Welcome, {}".format(
+                            request.form.get("username")))
+                        return redirect(url_for(
+                            "profile", username=session["user"]))
+            else:
+            
+                flash("Incorrect Username and/or Password")
+                return redirect(url_for("login"))
+
+        else:
+
+            flash("Incorrect Username and/or Password")
+            return redirect(url_for("login"))
 
     return render_template("login.html")
+
 
 
 
