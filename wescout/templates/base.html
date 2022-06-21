@@ -21,6 +21,7 @@
                 <li><a href="{{ url_for('add_player') }}" class="nav-link">Add Player</a></li>
                 <li><a href="{{ url_for('regions') }}" class="nav-link">Regions</a></li>
                 <li><a href="{{ url_for('register') }}" class="nav-link">Register</a></li>
+                <li><a href="{{ url_for('profile', username=session['user']) }}">Profile</a></li>
               </ul>
             </div>
           </nav>
