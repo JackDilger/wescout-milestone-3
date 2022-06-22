@@ -140,7 +140,7 @@ def register():
         flash("Registration Successful!")
         return redirect(url_for("profile", username=session["user"]))
 
-    return render_template("login.html")
+    return render_template("register.html")
 
 
 @app.route("/profile/<username>", methods=["GET", "POST"])
