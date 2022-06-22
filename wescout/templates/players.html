@@ -2,13 +2,35 @@
 {% block content %}
 
 
+<div class="row card-panel grey darken-2">
+    <form action="{{ url_for('search') }}" method="post" class="col s12">
+        <div class="row valign-wrapper center-align">
+            <div class="input-field col s12 m8">
+                <i class="fas fa-search prefix"></i>
+                <input type="text" name="query" id="query" minlength="3" class="validate white-text" required>
+                <label class="white-text" for="query">Search Players</label>
+            </div>
+            <div class="col s12 m4">
+                <a href="{{ url_for('get_players') }}" class="red btn">Reset</a>
+                <button type="submit" class="grey darken-3 btn">
+                    <i class="fas fa-search left"></i> Search
+                </button>
+            </div>
+        </div>
+    </form>
+</div>
+
+
 <div class="row">
     <div class="col s12 center-align">
-        <a href="{{ url_for('add_player_btn') }}" id="add-player-btn"class="btn-large grey darken-2">
+        <a href="{{ url_for('add_player_btn') }}" id="add-player-btn"class="btn-large grey darken-3">
             Add Player <i class="fa-solid fa-circle-plus"></i>
         </a>
     </div>
 </div>
+
+
+
 
     <ul class="collapsible popout">
         {% for player in players %}
@@ -36,9 +58,14 @@
                    
                 </div>
 
+
+
                 <div class="col-md-9">
                     <strong>{{ player.player_name }}</strong> : {{ player.domestic_club }} 
                 </div>  
+
+
+
 
             </div>
         

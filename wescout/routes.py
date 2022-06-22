@@ -202,12 +202,10 @@ def add_player_btn():
     return render_template("add_player.html")
 
 
-
-
-
-
-
-
+@app.route("/search", methods=["GET", "POST"])
+def search():
+    query = request.form.get("query")
+    players = list(mongo.db.players.find({"$text": {"$search": query}}))
+    return render_template("players.html", players=players)
 
     
-
