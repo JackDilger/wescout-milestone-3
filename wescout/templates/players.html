@@ -33,12 +33,13 @@
             </div>
         
             <div class="collapsible-body grey darken-3">
-                <strong>Rating: {{ player.player_rating }}</strong>
+                <strong>Star Rating: {{ player.player_rating }}</strong>
                 <p>Age: {{ player.player_age }}</p>
                 <p>Preferred Foot: {{ player.preferred_foot }}</p>
                 <p>National Team: {{ player.national_team }}</p>
                 <p>Market Value £: {{ player.market_value }}</p>
                 <p>Player Notes: {{ player.player_notes }}</p>
+                <p><em>Created By: {{ player.created_by }}</em></p>
             </div>
         </li>
         {% endfor %}

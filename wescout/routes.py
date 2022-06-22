@@ -61,7 +61,8 @@ def add_player():
             "domestic_club": request.form.get("domestic_club"),
             "player_rating": request.form.get("player_rating"),
             "market_value": request.form.get("market_value"),
-            "player_notes": request.form.get("player_notes") 
+            "player_notes": request.form.get("player_notes"),
+            "created_by": session["user"]
         }
         mongo.db.players.insert_one(player)
         flash("Player Successfully Added")
@@ -75,6 +76,10 @@ def add_player():
 def edit_player(player_id):
 
     player = mongo.db.players.find_one({"_id": ObjectId(player_id)})
+
+    if "user" not in session or session["user"] != player["created_by"]:
+        flash("You can only edit players you added!")
+        return redirect(url_for("get_players"))
         
     if request.method == "POST":
         submit = {
@@ -86,7 +91,8 @@ def edit_player(player_id):
             "domestic_club": request.form.get("domestic_club"),
             "player_rating": request.form.get("player_rating"),
             "market_value": request.form.get("market_value"),
-            "player_notes": request.form.get("player_notes") 
+            "player_notes": request.form.get("player_notes"),
+            "created_by": session["user"]
         }
         mongo.db.players.replace_one({"_id": ObjectId(player_id)}, submit)
         flash("Player Successfully Updated")
@@ -100,6 +106,10 @@ def edit_player(player_id):
 def delete_player(player_id):
 
     player = mongo.db.players.find_one({"_id": ObjectId(player_id)})
+
+    if "user" not in session or session["user"] != player["created_by"]:
+        flash("You can only delete players you added!")
+        return redirect(url_for("get_players"))
 
     mongo.db.players.delete_one({"_id": ObjectId(player_id)})
     flash("PLayer Successfully Deleted")
