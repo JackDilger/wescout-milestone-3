@@ -18,13 +18,19 @@
               <a href="#" data-target="mobile-demo" class="sidenav-trigger"><i class="fa-solid fa-bars"></i></i></a>
               <ul class="right hide-on-med-and-down">
                 <li><a href="{{ url_for('get_players') }}" class="nav-link">Players</a></li>
+        {% if session.user %}
+                <li><a href="{{ url_for('profile', username=session['user']) }}">Profile</a></li>
                 <li><a href="{{ url_for('add_player') }}" class="nav-link">Add Player</a></li>
+                <li><a href="{{ url_for('logout') }}">Log Out</a></li>
+              
+                
+        {% else %}
                 <li><a href="{{ url_for('regions') }}" class="nav-link">Regions</a></li>
                 <li><a href="{{ url_for('register') }}" class="nav-link">Register</a></li>
-                <li><a href="{{ url_for('profile', username=session['user']) }}">Profile</a></li>
                 <li><a href="{{ url_for('login') }}">Log In</a></li>
-                <li><a href="{{ url_for('logout') }}">Log Out</a></li>
-
+                
+        {% endif %}
+        
               </ul>
             </div>
           </nav>
