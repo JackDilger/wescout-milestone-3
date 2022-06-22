@@ -1,6 +1,15 @@
 {% extends "base.html" %}
 {% block content %}
 
+
+<div class="row">
+    <div class="col s12 center-align">
+        <a href="{{ url_for('add_player_btn') }}" id="add-player-btn"class="btn-large grey darken-2">
+            Add Player <i class="fa-solid fa-circle-plus"></i>
+        </a>
+    </div>
+</div>
+
     <ul class="collapsible popout">
         {% for player in players %}
         <li>

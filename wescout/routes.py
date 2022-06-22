@@ -192,6 +192,20 @@ def logout():
 
 
 
+@app.route("/add_player_btn")
+def add_player_btn():
+
+    if "user" not in session:
+        flash("You must regsiter to add players!")
+        return redirect(url_for("register"))
+
+    return render_template("add_player.html")
+
+
+
+
+
+
 
 
 
