@@ -27,6 +27,8 @@ body {
     color: #3FE10E;
   }
 
+
+
   .fa-clipboard-user{
     font-size: 35px;
   } 
@@ -93,5 +95,21 @@ body {
 
 .btn:hover, .btn-large:hover, .btn-small:hover {
   border: 2px solid white;
+}
+
+#register-link{
+  color: #3FE10E;
+}
+
+#register-link:hover{
+   text-decoration: underline;
+}
+
+#login-link{
+  color: #3FE10E;
+}
+
+#login-link:hover{
+   text-decoration: underline;
 }
 
