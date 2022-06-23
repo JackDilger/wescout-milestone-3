@@ -42,22 +42,6 @@ body {
 
 
 
-  #delete-region-btn:hover {
-    border: 2px solid white;
-  }
-
-  #edit-region-btn:hover {
-    border: 2px solid white;
-  }
-
-  #confirm-delete-modal-btn:hover {
-    border: 2px solid white;
-  }
-
-  #close-modal-btn:hover {
-    border: 2px solid white;
-  }
-
   .modal .modal-footer {
     text-align: center;
   }
@@ -94,10 +78,6 @@ body {
     background-color: #757575;
   }
 
-  .btn-small:hover {
-    border: 2px solid white;
-  }
-
   .btn-small {
     margin: 5px;
 }
@@ -109,5 +89,9 @@ body {
 
 #add-player-btn{
   margin-top: 15px;
+}
+
+.btn:hover, .btn-large:hover, .btn-small:hover {
+  border: 2px solid white;
 }
 
