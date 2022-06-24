@@ -478,6 +478,16 @@ To clone this project, follow these steps:
 
 *Note - make sure to include your env.py file in the .gitignore file so that no sensitive information is pushed to GitHub.
 
+## Credits
+
+### Media
+
+- The background image present on the base.html template was taken from [unsplash](https://unsplash.com/photos/r-xKieMqL34)
+
+### Acknowledgements
+
+- Brian from Code institute for taking us through 3 masterclasses to get more in depth understanding of relational and non relational databases and how to combine the 2. 
+
 
 
 
