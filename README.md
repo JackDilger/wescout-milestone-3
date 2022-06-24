@@ -230,7 +230,49 @@ One of our main aims with doing this, was to ensure though that your own informa
   - Once they confirm deletion on the modal pop up, they are taken to the regions page where a flash message will confirm the region has been successfully deleted. 
 
 
-  ![Delete-Region](wescout/static/images/readme/delete-region-deplyed-site.JPG)#
+  ![Delete-Region](wescout/static/images/readme/delete-region-deplyed-site.JPG)
+
+
+## Data Schema
+
+***
+
+![Schema](wescout/static/images/readme/schema.JPG)
+
+The above image shows the information being stored across the 2 databases and the links between the 2. I chose to use both a relational and non-relational database in the Wescout app that are linked together where appropriate. Each database stores the information that is relevant to it's strengths. 
+
+I used relational database with POSTGRESQL and SQLALCHEMY for user authentication data and my list of scouting regions. The reason being that this is structured information that is unlikely to change, which lends itself to the strengths of this type of database. The user and regions data is stored in rows and columns in a structured manner and data that can
+be changed is stored only on one location. 
+
+I used a non-relational database with MONGODB for the player information. The reason being that all player details are
+vastly different which lends its perfectly to this type of database, with its main strength of storing unstructured document based information.
+
+The unique region ID however is inputted in to each player document, linking the 2 databases together. This ensures if a region was to be deleted all players from that region would be removed from the database as well, to ensure there is no redundant information being stored in MONGODB. This cascade delete function is a powerful feature so it is restricted so that only the website admin can have control over it. 
+
+The username for each registered user is also inputted in to each player document. This is super important, as this allows the app know who each player was 'created by' and use defensive programming to ensure only a user themselves can edit/delete their saved player data. 
+
+
+## Defensive programming  features
+
+***
+
+Security was focused on throughout the app to ensure player data was handled in a safe manor, a number of defensive features were
+implemented in to the design:
+
+- The 'Add Player' button on the main home page will run a check to see a user is in session and redirect them to register/login if not. It's important players are logged in to their user profiles before being able to add players so we know who players were 'created by'. 
+- The edit and delete buttons both run checks to see who the listed players were 'created by', this ensures that any user in session will only be permitted to edit or delete players they have added to the database. They cannot edit or delete players added by other users. 
+- If a delete button is clicked, instead of deleting the chosen information instantly a modal is launched which offers the user the choice to either proceed or cancel the request. 
+- We’ve used Werkzeug to hash passwords for each user when registering to site. This adds an additional layer of security by allowing the data to be stored in a format that can't be reversed at any reasonable amount of time or cost for a hacker.
+- Only once a user registers to the site will they be given access to the add player and profile pages. These nav bar links are
+hidden until a user is in session. 
+- The scouting regions page is only visible to the website admin when logged. This nav bar link his hidden to all other users. The functions for adding/deleting/editing regions all run checks to ensure only the admin user can carry out these actions. 
+
+
+
+
+
+
+
 
 
 
