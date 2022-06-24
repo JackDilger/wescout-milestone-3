@@ -20,6 +20,11 @@ def regions():
 
 @app.route("/add_region", methods=["GET", "POST"])
 def add_region():
+
+    if "user" not in session or session["user"] != "admin":
+        flash("You must be admin to manage regions!")
+        return redirect(url_for("regions"))
+
     if request.method == "POST":
         region = Region(region_name=request.form.get("region_name"))
         db.session.add(region)
@@ -31,16 +36,26 @@ def add_region():
 
 @app.route("/edit_region/<int:region_id>", methods=["GET", "POST"])
 def edit_region(region_id):
+
+    if "user" not in session or session["user"] != "admin":
+        flash("You must be admin to manage regions!")
+        return redirect(url_for("regions"))
+
     region = Region.query.get_or_404(region_id)
     if request.method == "POST":
         region.region_name = request.form.get("region_name")
         db.session.commit()
+        flash("Region Successfully Updated")
         return redirect(url_for("regions"))
     return render_template("edit_region.html", region=region)
 
 
 @app.route("/delete_region/<int:region_id>")
 def delete_region(region_id):
+    if session["user"] != "admin":
+        flash("You must be admin to manage regions!")
+        return redirect(url_for("regions"))
+
     region = Region.query.get_or_404(region_id)
     db.session.delete(region)
     db.session.commit()
