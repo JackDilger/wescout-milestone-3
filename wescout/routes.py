@@ -214,3 +214,4 @@ def search():
     query = request.form.get("query")
     players = list(mongo.db.players.find({"$text": {"$search": query}}))
     return render_template("players.html", players=players)
+

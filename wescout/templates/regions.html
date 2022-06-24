@@ -1,8 +1,8 @@
 {% extends "base.html" %}
 {% block content %}
-
+<!--Page title-->
 <h3 class="center-align"><span>Scouting Region</span></h3>
-
+<!--Add region button-->
 <div class="row">
     <div class="col s12 center-align">
         <a href="{{ url_for('add_region') }}" class="btn-large grey darken-3" id="add-region-btn">
@@ -11,7 +11,7 @@
     </div>
 </div>
 
-
+<!--All Regions-->
 <div class="row">
     {% for region in regions %}
     <div class="col s12 m6 l3">
@@ -19,11 +19,12 @@
             <div class="card-content">
                 <span class="card-title">{{ region.region_name }}</span>
             </div>
+            <!--Edit/delete buttons-->
             <div class="card-action">
                 <a href="{{ url_for('edit_region', region_id=region.id) }}" class="btn green accent-4 black-text">Edit</a>
                 <a href="#modal-{{ region.id }}" class="btn red  modal-trigger black-text">Delete</a>
 
-
+                <!--Delete modal-->
                 <div id="modal-{{ region.id }}" class="modal grey darken-3">
                     <div class="modal-content">
                         <p class="white-text">Are you sure?</p>
