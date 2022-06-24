@@ -4,7 +4,7 @@ body {
     display: flex;
     min-height: 100vh;
     flex-direction: column;
-    background-image: url(../images/wescout-background-image.jpg);
+    background-image: url(../images/wescout-background-image.avif);
     background-attachment: fixed;
     background-position: center;
     background-repeat: no-repeat;

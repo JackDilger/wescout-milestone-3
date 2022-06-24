@@ -20,8 +20,8 @@
                 <span class="card-title">{{ region.region_name }}</span>
             </div>
             <div class="card-action">
-                <a href="{{ url_for('edit_region', region_id=region.id) }}" id="edit-region-btn" class="btn green accent-4">Edit</a>
-                <a href="#modal-{{ region.id }}" id="delete-region-btn" class="btn red  modal-trigger">Delete</a>
+                <a href="{{ url_for('edit_region', region_id=region.id) }}" class="btn green accent-4 black-text">Edit</a>
+                <a href="#modal-{{ region.id }}" class="btn red  modal-trigger black-text">Delete</a>
 
 
                 <div id="modal-{{ region.id }}" class="modal grey darken-3">
