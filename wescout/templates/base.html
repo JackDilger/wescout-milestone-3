@@ -1,99 +1,103 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css"><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css" type="text/css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css" type="text/css">
     <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}" type="text/css">
     <title>Wescout</title>
 </head>
+
 <body>
     <header>
         <!--Nav bar-->
         <nav class="grey darken-3">
             <div class="nav-wrapper">
-              <a href="{{ url_for('get_players') }}" class="brand-logo"><i class="fa-solid fa-clipboard-user hide-on-small-and-down"></i>Wescout</a>
-              <a href="#" data-target="mobile-demo" class="sidenav-trigger"><i class="fa-solid fa-bars"></i></i></a>
-              <ul class="right hide-on-med-and-down">
-                <li><a href="{{ url_for('get_players') }}" class="nav-link">Players</a></li>
-        {% if session.user %}
-                <li><a href="{{ url_for('profile', username=session['user']) }}">Profile</a></li>
-                <li><a href="{{ url_for('add_player') }}" class="nav-link">Add Player</a></li>
-                <li><a href="{{ url_for('logout') }}">Log Out</a></li>
-                {% if session.user|lower == "admin"|lower %}
+                <a href="{{ url_for('get_players') }}" class="brand-logo"><i class="fa-solid fa-clipboard-user hide-on-small-and-down"></i>Wescout</a>
+                <a href="#" data-target="mobile-demo" class="sidenav-trigger"><i class="fa-solid fa-bars"></i></a>
+                <ul class="right hide-on-med-and-down">
+                    <li><a href="{{ url_for('get_players') }}" class="nav-link">Players</a></li>
+                    {% if session.user %}
+                    <li><a href="{{ url_for('profile', username=session['user']) }}">Profile</a></li>
+                    <li><a href="{{ url_for('add_player') }}" class="nav-link">Add Player</a></li>
+                    <li><a href="{{ url_for('logout') }}">Log Out</a></li>
+                    {% if session.user|lower == "admin"|lower %}
                     <li><a href="{{ url_for('regions') }}" class="nav-link">Regions</a></li>
-                {% endif %}
-              
-        {% else %}
+                    {% endif %}
 
-                <li><a href="{{ url_for('register') }}" class="nav-link">Register</a></li>
-                <li><a href="{{ url_for('login') }}">Log In</a></li>
-                
-        {% endif %}
-        
-              </ul>
+                    {% else %}
+
+                    <li><a href="{{ url_for('register') }}" class="nav-link">Register</a></li>
+                    <li><a href="{{ url_for('login') }}">Log In</a></li>
+
+                    {% endif %}
+
+                </ul>
             </div>
-          </nav>
-          <!--Hamburger navbar for small screens-->
-          <ul class="sidenav" id="mobile-demo">
+        </nav>
+        <!--Hamburger navbar for small screens-->
+        <ul class="sidenav" id="mobile-demo">
             <li><a href="{{ url_for('get_players') }}" class="nav-link">Players</a></li>
             {% if session.user %}
-                  <li><a href="{{ url_for('profile', username=session['user']) }}">Profile</a></li>
-                  <li><a href="{{ url_for('add_player') }}" class="nav-link">Add Player</a></li>
-                  <li><a href="{{ url_for('logout') }}">Log Out</a></li>
-                  {% if session.user|lower == "admin"|lower %}
-                      <li><a href="{{ url_for('regions') }}" class="nav-link">Regions</a></li>
-                  {% endif %}
-                      
-            {% else %}
-                  <li><a href="{{ url_for('register') }}" class="nav-link">Register</a></li>
-                  <li><a href="{{ url_for('login') }}">Log In</a></li>
-        
+            <li><a href="{{ url_for('profile', username=session['user']) }}">Profile</a></li>
+            <li><a href="{{ url_for('add_player') }}" class="nav-link">Add Player</a></li>
+            <li><a href="{{ url_for('logout') }}">Log Out</a></li>
+            {% if session.user|lower == "admin"|lower %}
+            <li><a href="{{ url_for('regions') }}" class="nav-link">Regions</a></li>
             {% endif %}
-          </ul>
+
+            {% else %}
+            <li><a href="{{ url_for('register') }}" class="nav-link">Register</a></li>
+            <li><a href="{{ url_for('login') }}">Log In</a></li>
+
+            {% endif %}
+        </ul>
     </header>
 
     <section>
-      <!-- flash messages -->
-      {% with messages = get_flashed_messages() %}
-          {% if messages %}
-              {% for message in messages %}
-                  <div class="row flashes">
-                      <h3 class="center-align">{{ message }}</h3>
-                  </div>
-              {% endfor %}
-          {% endif %}
-      {% endwith %}
-  </section>
+        <!-- flash messages -->
+        {% with messages = get_flashed_messages() %}
+        {% if messages %}
+        {% for message in messages %}
+        <div class="row flashes">
+            <h3 class="center-align">{{ message }}</h3>
+        </div>
+        {% endfor %}
+        {% endif %}
+        {% endwith %}
+    </section>
 
     <main class="container">
         {% block content %}
         {% endblock %}
     </main>
 
-    
+
     <footer class="page-footer grey darken-3 center-align">
 
-      <div class="container">
-        <div class="row">
-          <div>
-            <h5 class="white-text">Secure Data <i class="fa-solid fa-lock"></i></h5>
-            <p class="grey-text text-lighten-4">
-              All data is securley stored and only you can edit or delete your player information.</p>
-          </div>
-        </div>
-      </div>
-      <div class="footer-copyright">
         <div class="container">
-          Copyright©2022 | Jack Dilger | All rights reserved
+            <div class="row">
+                <div>
+                    <h5 class="white-text">Secure Data <i class="fa-solid fa-lock"></i></h5>
+                    <p class="grey-text text-lighten-4">
+                        All data is securley stored and only you can edit or delete your player information.</p>
+                </div>
+            </div>
         </div>
-      </div>
+        <div class="footer-copyright">
+            <div class="container">
+                Copyright©2022 | Jack Dilger | All rights reserved
+            </div>
+        </div>
     </footer>
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
     <script src="{{ url_for('static', filename='js/script.js') }}"></script>
 
 </body>
+
 </html>

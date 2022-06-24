@@ -1,105 +1,97 @@
 {% extends "base.html" %}
 {% block content %}
 
-    <h3 class="center-align"><span>Add Player</span></h3>
+<h3 class="center-align"><span>Add Player</span></h3>
 
-    <div class="row card-panel grey darken-2">
-        <form class="col s12" method="POST" action="{{ url_for('add_player') }}">
+<div class="row card-panel grey darken-2">
+    <form class="col s12" method="POST" action="{{ url_for('add_player') }}">
 
-            <div class="row">
-				<div class="input-field col s12">
+        <div class="row">
+            <div class="input-field col s12">
                 <i class="fa-solid fa-earth-americas prefix"></i>
                 <select id="region_name" name="region_id" class="validate white-text" required>
-                <option value="" disabled selected>Choose Region</option>
+                    <option value="" disabled selected>Choose Region</option>
                     {% for region in regions %}
-                       <option value="{{ region.id }}">{{ region.region_name }}</option>
+                    <option value="{{ region.id }}">{{ region.region_name }}</option>
                     {% endfor %}
                 </select>
-                <label class="white-text" for="region_id">Region</label>
             </div>
-			</div>
+        </div>
 
 
 
 
-            <div class="row">
-                <div class="input-field col s12">
-                    <i class="fa-solid fa-circle-user prefix"></i>
-                    <input id="player_name" name="player_name" minlength="5" maxlength="50"
-                        type="text" class="validate white-text" required>
-                    <label class="white-text" for="player_name">Player Name</label>
-                </div>
+        <div class="row">
+            <div class="input-field col s12">
+                <i class="fa-solid fa-circle-user prefix"></i>
+                <input id="player_name" name="player_name" minlength="5" maxlength="50" type="text" class="validate white-text" required>
+                <label class="white-text" for="player_name">Player Name</label>
             </div>
-            <div class="row">
-                <div class="input-field col s12">
-                    <i class="fa-solid fa-pencil prefix"></i>
-                    <input id="player_age" name="player_age" minlength="2" maxlength="50"
-                        type="text" class="validate white-text" required>
-                    <label class="white-text" for="player_age">Player Age</label>
-                </div>
+        </div>
+        <div class="row">
+            <div class="input-field col s12">
+                <i class="fa-solid fa-pencil prefix"></i>
+                <input id="player_age" name="player_age" minlength="2" maxlength="50" type="text" class="validate white-text" required>
+                <label class="white-text" for="player_age">Player Age</label>
             </div>
-            <div class="row">
-                <div class="input-field col s12">
-                    <i class="fa-solid fa-shoe-prints prefix"></i>
-                    <input id="preferred_foot" name="preferred_foot" minlength="3" maxlength="50"
-                        type="text" class="validate white-text" required>
-                    <label class="white-text" for="preferred_foot">Preffered Foot</label>
-                </div>
+        </div>
+        <div class="row">
+            <div class="input-field col s12">
+                <i class="fa-solid fa-shoe-prints prefix"></i>
+                <input id="preferred_foot" name="preferred_foot" minlength="3" maxlength="50" type="text" class="validate white-text" required>
+                <label class="white-text" for="preferred_foot">Preffered Foot</label>
             </div>
-			<div class="row">
-				<div class="input-field col s12">
-                    <i class="fa-solid fa-globe prefix"></i>
-                    <input id="national_team" name="national_team" minlength="3" maxlength="50"
-                        type="text" class="validate white-text" required>
-                    <label class="white-text" for="national_team">National Team</label>
-				</div>
-			</div>
-            <div class="row">
-				<div class="input-field col s12">
-                    <i class="fa-solid fa-location-dot prefix"></i>
-                    <input id="domestic_club" name="domestic_club" minlength="3" maxlength="50"
-                        type="text" class="validate white-text" required>
-                    <label class="white-text" for="domestic_club">Domestic Club</label>
-				</div>
-			</div>
-            <div class="row">
-				<div class="input-field col s12">
-                    <i class="fa-solid fa-star prefix"></i>
-                    <select id="player_rating" name="player_rating" class="validate white-text" required>
-                        <option value="" disabled selected>Choose Player Rating</option>
-                        <option value="1">1 Star</option>
-                        <option value="2">2 Star</option>
-                        <option value="3">3 Star</option>
-                        <option value="4">4 Star</option>
-                        <option value="5">5 Star</option>
-                    </select>
-                    <label class="white-text" for="player_rating">Player Rating</label>
-				</div>
-			</div>
-            <div class="row">
-				<div class="input-field col s12">
-                    <i class="fa-solid fa-sterling-sign prefix"></i>
-                    <input id="market_value" name="market_value" minlength="3" maxlength="50"
-                        type="text" class="validate white-text" required>
-                    <label class="white-text" for="market_value">Market Value</label>
-				</div>
-			</div>
-            <div class="row">
-				<div class="input-field col s12">
-                    <i class="fa-solid fa-comment prefix"></i>
-                    <textarea id="player_notes" name="player_notes" minlength="5"
-                        maxlength="1000" class="materialize-textarea validate white-text" required></textarea>
-                    <label class="white-text" for="player_notes">Player Notes</label>
-				</div>
-			</div>
-            <div class="row">
-                <div class="col s12 center-align">
-                    <button type="submit" class="btn-large grey darken-3" id="add-player-btn">
-                        Add Player <i class="fa-solid fa-circle-plus right"></i>
-                    </button>
-                </div>
+        </div>
+        <div class="row">
+            <div class="input-field col s12">
+                <i class="fa-solid fa-globe prefix"></i>
+                <input id="national_team" name="national_team" minlength="3" maxlength="50" type="text" class="validate white-text" required>
+                <label class="white-text" for="national_team">National Team</label>
             </div>
-        </form>
-    </div>
+        </div>
+        <div class="row">
+            <div class="input-field col s12">
+                <i class="fa-solid fa-location-dot prefix"></i>
+                <input id="domestic_club" name="domestic_club" minlength="3" maxlength="50" type="text" class="validate white-text" required>
+                <label class="white-text" for="domestic_club">Domestic Club</label>
+            </div>
+        </div>
+        <div class="row">
+            <div class="input-field col s12">
+                <i class="fa-solid fa-star prefix"></i>
+                <select id="player_rating" name="player_rating" class="validate white-text" required>
+                    <option value="" disabled selected>Choose Player Rating</option>
+                    <option value="1">1 Star</option>
+                    <option value="2">2 Star</option>
+                    <option value="3">3 Star</option>
+                    <option value="4">4 Star</option>
+                    <option value="5">5 Star</option>
+                </select>
+                <label class="white-text" for="player_rating">Player Rating</label>
+            </div>
+        </div>
+        <div class="row">
+            <div class="input-field col s12">
+                <i class="fa-solid fa-sterling-sign prefix"></i>
+                <input id="market_value" name="market_value" minlength="3" maxlength="50" type="text" class="validate white-text" required>
+                <label class="white-text" for="market_value">Market Value</label>
+            </div>
+        </div>
+        <div class="row">
+            <div class="input-field col s12">
+                <i class="fa-solid fa-comment prefix"></i>
+                <textarea id="player_notes" name="player_notes" minlength="5" maxlength="1000" class="materialize-textarea validate white-text" required></textarea>
+                <label class="white-text" for="player_notes">Player Notes</label>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col s12 center-align">
+                <button type="submit" class="btn-large grey darken-3" id="add-player-btn">
+                    Add Player <i class="fa-solid fa-circle-plus right"></i>
+                </button>
+            </div>
+        </div>
+    </form>
+</div>
 
 {% endblock %}

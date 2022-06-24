@@ -95,7 +95,7 @@ def edit_player(player_id):
     if "user" not in session or session["user"] != player["created_by"]:
         flash("You can only edit players you added!")
         return redirect(url_for("get_players"))
-        
+
     if request.method == "POST":
         submit = {
             "region_id": request.form.get("region_id"),
@@ -116,7 +116,6 @@ def edit_player(player_id):
     return render_template("edit_player.html", player=player, regions=regions)
 
 
-
 @app.route("/delete_player/<player_id>")
 def delete_player(player_id):
 
@@ -134,19 +133,16 @@ def delete_player(player_id):
 @app.route("/register", methods=["GET", "POST"])
 def register():
     if request.method == "POST":
-        
-        existing_user = Users.query.filter(Users.user_name == \
-                                           request.form.get("username").lower()).all()
-        
+        existing_user = Users.query.filter(
+            Users.user_name ==
+            request.form.get("username").lower()).all()
         if existing_user:
             flash("Username already exists")
             return redirect(url_for("register"))
-        
         user = Users(
             user_name=request.form.get("username").lower(),
             password=generate_password_hash(request.form.get("password"))
         )
-        
         db.session.add(user)
         db.session.commit()
 
@@ -160,7 +156,6 @@ def register():
 
 @app.route("/profile/<username>", methods=["GET", "POST"])
 def profile(username):
-        
     if "user" in session:
         return render_template("profile.html", username=session["user"])
 
@@ -171,12 +166,12 @@ def profile(username):
 def login():
     if request.method == "POST":
 
-        existing_user = Users.query.filter(Users.user_name == \
-                                           request.form.get("username").lower()).all()
+        existing_user = Users.query.filter(
+            Users.user_name ==
+            request.form.get("username").lower()).all()
 
         if existing_user:
             print(request.form.get("username"))
-      
             if check_password_hash(
                     existing_user[0].password, request.form.get("password")):
                         session["user"] = request.form.get("username").lower()
@@ -185,7 +180,6 @@ def login():
                         return redirect(url_for(
                             "profile", username=session["user"]))
             else:
-            
                 flash("Incorrect Username and/or Password")
                 return redirect(url_for("login"))
 
@@ -197,14 +191,12 @@ def login():
     return render_template("login.html")
 
 
-
 @app.route("/logout")
 def logout():
 
     flash("Successfully logged out")
     session.pop("user")
     return redirect(url_for("login"))
-
 
 
 @app.route("/add_player_btn")
@@ -222,5 +214,3 @@ def search():
     query = request.form.get("query")
     players = list(mongo.db.players.find({"$text": {"$search": query}}))
     return render_template("players.html", players=players)
-
-    

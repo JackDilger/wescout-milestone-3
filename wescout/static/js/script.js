@@ -14,8 +14,7 @@ document.addEventListener("DOMContentLoaded", function() {
     // modal inititalization
     let modal = document.querySelectorAll('.modal');
     M.Modal.init(modal);
-    
+});
 
-}); 
 
 

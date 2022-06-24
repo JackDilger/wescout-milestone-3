@@ -257,7 +257,7 @@ The username for each registered user is also inputted in to each player documen
 ***
 
 Security was focused on throughout the app to ensure player data was handled in a safe manor, a number of defensive features were
-implemented in to the design:
+built in to the design:
 
 - The 'Add Player' button on the main home page will run a check to see a user is in session and redirect them to register/login if not. It's important players are logged in to their user profiles before being able to add players so we know who players were 'created by'. 
 - The edit and delete buttons both run checks to see who the listed players were 'created by', this ensures that any user in session will only be permitted to edit or delete players they have added to the database. They cannot edit or delete players added by other users. 
@@ -266,6 +266,8 @@ implemented in to the design:
 - Only once a user registers to the site will they be given access to the add player and profile pages. These nav bar links are
 hidden until a user is in session. 
 - The scouting regions page is only visible to the website admin when logged. This nav bar link his hidden to all other users. The functions for adding/deleting/editing regions all run checks to ensure only the admin user can carry out these actions. 
+
+
 
 
 
