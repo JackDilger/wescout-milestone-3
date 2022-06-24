@@ -109,14 +109,14 @@ One of our main aims with doing this, was to ensure though that your own informa
 
 
 
-![Logo](/assets/readme-files/logo.quiz.JPG)
+![Logo](wescout/static/images/readme/logo-deployed-site.JPG)
 
 
 - __Welcome Page- Links to user story 1__
   - The welcome page is displayed as soon as you load the website, it offers clear text content abouts its purpose and target audience and gives helpful tips on how to use the websites features.
 
 
-  ![Welcome](/assets/readme-files/logo.quiz.JPG)
+  ![Welcome](wescout/static/images/readme/welcome-deployed-site.JPG)
 
   
 - __Search Bar- Links to user story 10, 11 & 12__
@@ -124,7 +124,7 @@ One of our main aims with doing this, was to ensure though that your own informa
   - The reset button will allow you to reset the player view once you have finished with your search
 
 
-  ![Search](/assets/readme-files/logo.quiz.JPG)
+  ![Search](wescout/static/images/readme/search-deployed-site.JPG)
 
 
 - __Player Collapsible- Links to user story 8__
@@ -132,7 +132,7 @@ One of our main aims with doing this, was to ensure though that your own informa
   - You can see quick key information about the players name and club, and you can also expand each player section to view all the player data.
 
 
-  ![View Players](/assets/readme-files/logo.quiz.JPG)
+  ![View Players](wescout/static/images/readme/player-collapsible-deployed-site.JPG)
 
 
 - __Register- Links to user story 2 & 3- Links to site owner goal 6__
@@ -143,7 +143,7 @@ One of our main aims with doing this, was to ensure though that your own informa
   - Once registered you are taking to the profile page and welcomed to the site to give confirmation of your registration.
 
 
-  ![Register Form](/assets/readme-files/logo.quiz.JPG)
+  ![Register Form](wescout/static/images/readme/register-deplyed%20site.JPG)
 
 
 
@@ -153,7 +153,7 @@ One of our main aims with doing this, was to ensure though that your own informa
   - Once logged you are taking to the profile page and welcomed to the site to give confirmation of your login.
 
 
-  ![Login](/assets/readme-files/logo.quiz.JPG)
+  ![Login](wescout/static/images/readme/login-deployed-site.JPG)
 
 
 - __Log Out- Links to user story 2 & 4__
@@ -161,15 +161,14 @@ One of our main aims with doing this, was to ensure though that your own informa
   - Once logged they will be taken to the log in page and a flash message will confirm they have successfully logged out.
 
 
-  ![Logout](/assets/readme-files/logo.quiz.JPG)
-
+  ![Logout](wescout/static/images/readme/logout-screen-deployed-site.JPG)
 
 - __User Profile- Links to user story 3 & 5- Links to site owner goal 1__
   - Anytime a user logs on ore registeres, they are taken to their profile page and a flash message welcoming them gives confirmation they are logged in. 
   - Another important reason they are taken here when logging in, is that here the site developer/owner keeps users up to date on future development and features users can look forward to. 
 
 
-  ![Profile](/assets/readme-files/logo.quiz.JPG)
+  ![Profile](wescout/static/images/readme/profile-deplyed-site.JPG)
 
 
 - __Add Players-Links to user story 2 & 6__
@@ -178,7 +177,7 @@ One of our main aims with doing this, was to ensure though that your own informa
   - Once the form is submitted, they are taken to the players page where  flash message will confirm their player has been added successfully. 
 
 
-  ![Add-Player](/assets/readme-files/logo.quiz.JPG)
+  ![Add-Player](wescout/static/images/readme/add-player-deplyed-site.JPG)
 
 
 - __Edit Players- Links to user story 2 & 7__
@@ -186,15 +185,15 @@ One of our main aims with doing this, was to ensure though that your own informa
   - Once the form is submitted, they are taken to the players page where a flash message will confirm their player has been updated successfully. 
 
 
-  ![Edit-Player](/assets/readme-files/logo.quiz.JPG)
-
+  ![Edit-Player](wescout/static/images/readme/edit-player-btn-deployed%20site.JPG)
+  ![Edit-Player](wescout/static/images/readme/edit-player-form-deployed-site.JPG)
 
 - __Delete Player- Links to user story 2 & 8__
   - Users can easily delete their added players by using the delete button. The Button will open a modal to confirm the deletion or give the option to cancel the request.
   - Once they confirm deletion on the modal pop up, they are taken to the players page where a flash message will confirm their player has been successfully deleted. 
 
 
-  ![Delete-Player](/assets/readme-files/logo.quiz.JPG)
+  ![Delete-Player](wescout/static/images/readme/delete-player-modal.JPG)
 
 
 - __Manage Scouting Regions- Links to site owner goal 2__
@@ -204,7 +203,7 @@ One of our main aims with doing this, was to ensure though that your own informa
 
 
 
-  ![Manage Regions](/assets/readme-files/logo.quiz.JPG)
+  ![Manage Regions](wescout/static/images/readme/regions-nav-deployed-site.JPG)
 
 
 
@@ -213,7 +212,9 @@ One of our main aims with doing this, was to ensure though that your own informa
   - Once the form is submitted, they are taken to the regions page where a flash message will confirm their region has been added successfully. 
 
 
-  ![Add-Region](/assets/readme-files/logo.quiz.JPG)
+
+  ![Add-Region](wescout/static/images/readme/add-region-deplyed-site.JPG)
+
 
 
 - __Edit Region- Links to site owner goal 4__
@@ -221,7 +222,7 @@ One of our main aims with doing this, was to ensure though that your own informa
   - Once the form is submitted, they are taken to the regions page where a flash message will confirm their region has been updated successfully.  
 
 
-  ![Edit-Region](/assets/readme-files/logo.quiz.JPG)
+  ![Edit-Region](wescout/static/images/readme/edit-region-deplyed-site.JPG)
 
 
 - __Delete Region- Links to site owner goal 5__
@@ -229,7 +230,9 @@ One of our main aims with doing this, was to ensure though that your own informa
   - Once they confirm deletion on the modal pop up, they are taken to the regions page where a flash message will confirm the region has been successfully deleted. 
 
 
-  ![Delete-Region](/assets/readme-files/logo.quiz.JPG)
+  ![Delete-Region](wescout/static/images/readme/delete-region-deplyed-site.JPG)#
+
+
 
 
 
