@@ -323,7 +323,7 @@ Console errors | No console errors showing? | Pass
 
 ### Accessibility
 
-I have used chrome developer tool exstention Lighthouse to test my sites accessibilty. To provide a good user experience lighthouse reccomend sites should strive to have a good score (90-100). All pages on the site reach this reccomended score.
+I have used chrome developer tool exstention Lighthouse to test my sites accessibilty. To provide a good user experience lighthouse reccomends sites should strive to have a good score (90-100). All pages on the site reach this reccomended score.
 
 ![Lighthouse](wescout/static/images/readme/lighthouse-report.JPG)
 
@@ -367,6 +367,41 @@ I have used chrome developer tool exstention Lighthouse to test my sites accessi
  
 
 ![Responsive site images](wescout/static/images/readme/reponsive-site.JPG)
+
+
+## Technologies used
+
+***
+
+### Languages & Frameworks
+
+- [HTML5](https://en.wikipedia.org/wiki/HTML5)- Markup language.
+- [CSS3](https://en.wikipedia.org/wiki/CSS)- Style sheet language.
+- [Javascript](https://en.wikipedia.org/wiki/JavaScript)-  Programming language used to add interactivity to the homepage and implement the logic required to make the app work.
+- [Python](https://en.wikipedia.org/wiki/JavaScript)- Backend language used to control the logic on the site.
+- [Flask](https://en.wikipedia.org/wiki/JavaScript)-  Python framework used to simmplify the routing and HTML templating on the site using jinja.
+- [MongoDB](https://en.wikipedia.org/wiki/JavaScript)- Non Relational Database.
+- [POSTGRESQL with SQLALCHEMY](https://en.wikipedia.org/wiki/JavaScript)- Relational Database.
+- [Materialize](https://en.wikipedia.org/wiki/JavaScript)- Scripting language.
+-
+
+
+### Additional Tools 
+
+***
+
+- [Balsamiq](https://balsamiq.com/)- Used to build wireframes.
+- [Google Fonts](https://fonts.google.com/)- Sourced the website fonts.
+- [Chrome Dev Tools](https://developer.chrome.com/docs/devtools/)- Used to troubleshoot problems with code.
+- [Convertio](https://convertio.co/jpg-avif/)- To change image file type.
+- [Favicon.io](https://favicon.io/emoji-favicons/question-mark/)- Sourced the website Favicon.
+- [Unsplash](https://unsplash.com/photos/1fZC2rYbpsU)- Sourced background image.
+- [Gitpod](https://gitpod.io/workspaces)- Integrated development environment (IDE)  Used to write all my code.
+- [Git](https://git-scm.com/)- Used for version control.
+- [Github](https://github.com/)- Used to host my repository.
+- [Beautifier](https://beautifier.io/)- Used to organise code consistently.
+- [FontAwesome](https://fontawesome.com/) Large database of icons which I used all over the site to add to the visual language.
+
 
 
 

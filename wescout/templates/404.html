@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css" type="text/css">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}" type="text/css">
+    <title>Wescout</title>
+</head>
+
+<body>
+    <header>
+        <!--Nav bar-->
+        <nav class="grey darken-3">
+            <div class="nav-wrapper">
+                <a href="{{ url_for('get_players') }}" class="brand-logo"><i class="fa-solid fa-clipboard-user hide-on-small-and-down"></i>Wescout</a>
+            </div>
+        </nav>
+    </header>
+
+    <div class="row">
+        <div class="col s12 m8 offset-m2">
+            <div class="card-panel grey darken-3">
+                <div class="center-align">
+                    <p>This page does not exist {{ username }}.</p>
+                    <p>Click the Wescout logo in navbar to return back to the home page of the site</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer class="page-footer grey darken-3 center-align">
+
+        <div class="container">
+            <div class="row">
+                <div>
+                    <h5 class="white-text">Secure Data <i class="fa-solid fa-lock"></i></h5>
+                    <p class="grey-text text-lighten-4">
+                        All data is securley stored and only you can edit or delete your player information.</p>
+                </div>
+            </div>
+        </div>
+        <div class="footer-copyright">
+            <div class="container">
+                Copyright©2022 | Jack Dilger | All rights reserved
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+    <script src="{{ url_for('static', filename='js/script.js') }}"></script>
+
+</body>
+
+</html>
