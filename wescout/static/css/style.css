@@ -22,9 +22,16 @@ body {
       font-family: 'Fredoka One', cursive;
   }
 
+
   i{
     font-size: 35px;
     color: #3FE10E;
+  }
+
+  .fa-solid fa-futbol{
+    font-size: 10px;
+    color: #3FE10E;
+    
   }
 
 
