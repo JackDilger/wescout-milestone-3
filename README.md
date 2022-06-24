@@ -268,6 +268,106 @@ hidden until a user is in session.
 - The scouting regions page is only visible to the website admin when logged. This nav bar link his hidden to all other users. The functions for adding/deleting/editing regions all run checks to ensure only the admin user can carry out these actions. 
 
 
+### Testing 
+
+***
+
+### Validator Testing 
+
+- [Js Hint](https://jshint.com/)- All individual JavaScript files were copied in to JS hints validator and no warnings were found.
+- [WC3 Mark Up Validation](https://validator.w3.org/)- The published site link was validated and returned no error or warning in my HTML.
+- [W3C CSS Validation](https://validator.w3.org/)- The published site link was validated and returned no error or warning in my CSS.
+- [PEP8 online](http://pep8online.com/)- Was used to validate all python code and was fully pep8 compliant. 
+
+## Development Version- Manual Testing
+
+
+Test            | Outcome                          | Result
+--------------- | -------------------------------- | ------------
+Wescout logo | When the logo is selected with a click does it link back to the home page or refresh the home page if the user is already their? | Pass 
+Nav bar links | Do all nav bar links direct the user to the intended desination? Does the text underline when hovering over to indicate the link is clickable?| Pass 
+Button Links | Does each link direct the user to the intended destination? Does the border change color when hovering to indicate the button is clickable? | Pass
+Responsiveness | Is the website responsibve accross all devices? | Pass
+Accessibility | Is the website accessible for all users? | Pass
+Flash Messages | Do flash messages display to confirm all user actions for add/edit/delete/login/logout? | Pass
+Add player Button | Does the add player button load the add player form if a user is logged in? Does it redirect to the register 
+page if not? | Pass
+Search bar | Does the search bar  enable text index search using player name or username? | Pass
+Reset Button | Does the reset button reload all players after using searches? | Pass
+Player Collapsible | Does the player collapsible show all players currently on the database? Does it expand on click and display all player information? | Pass
+Edit player button | Does the edit player button open the edit player form? Does it only allow the user who added the player to request this?| Pass
+Delete player button| Does the delete player button load the modal for confirmation of deletion? Does it only allow the user who added the player to confirm this? | Pass
+Register | As a new user can I easily register to the site using the form?  | Pass
+Profile | As a user am I taken to the profile page when I register to welcome me? Can I see future features in development on this page? | Pass
+Log out | Can I use the navbar link to log out?  | Pass
+Log in | Can I log back in to the site easily using the log in form? | Pass
+Add player form | Does the add player form allow me to add a new player to the database? | Pass
+Edit player form | Does the edit player form allow me to udpate my players information? Does the current information of the player preload on to the form? | Pass
+Regions page | Is the scouting regions page hiden to all users aprt from the admin of the website?| Pass
+Add Region | Can only the admin user launch the add region form? Does the the add region form allow the admin user to add a new region?| Pass
+Edit Region | Can only the admin user launch the edit region form? Does the the edit region form allow the admin user to update a region name ?| Pass
+Delete Region | Does the delete region button open the deletion confirmation modal? Can only th admin user confirm deletion?
+Does deleting a region cascade delete all players part of that region? | Pass
+404 error page | Is a user taken to the 404 error page and provided with a working link back to the main site if they are directed to a non existent page? | Pass
+
+
+## Deployed Version- Manual Testing
+
+Test            | Outcome                          | Result
+--------------- | -------------------------------- | ------------
+Full checks against development version | Were all development testing criteria still passed once the site was deployed, with no errors showing?| Pass
+Visual Checks | Are all images of usableresolution, all text unobscured and undistracted foregrounds? | Pass
+Code checked | No erros showing in the code? | Pass
+Console errors | No console errors showing? | Pass
+
+
+### Accessibility
+
+I have used chrome developer tool exstention Lighthouse to test my sites accessibilty. To provide a good user experience lighthouse reccomend sites should strive to have a good score (90-100). All pages on the site reach this reccomended score.
+
+![Lighthouse](wescout/static/images/readme/lighthouse-report.JPG)
+
+### Browser Testing
+
+- I tested the site across multiple browsers which all worked.
+  - Chrome
+  - Safari
+  - Edge
+  - Firefox
+  - Opera
+
+### Device Testing
+
+- I manually tested the site across different device operating systems which all worked.
+  - The latest version of iOS and iPadOS  is 15.5.
+  - The latest version of Android OS 12
+  - Windows PC
+  - MacBook
+
+- I used chrome dev tools to manually test the sites responsiveness across a range of devices which all worked. Devices include:
+  - iphone 5-12
+  - iphone SE
+  - iphone XR
+  - iphone 12 PRO
+  - Pixel 5
+  - Galaxy S8+
+  - Galaxy S20 Ultra
+  - Galaxy A51/71
+  - Galaxy Fold
+  - ipad Air
+  - ipad Mini
+  - Surface Pro 7
+  - Surface Pro Duo
+  - Windows PC
+  - MacBook
+  - Nest Hub
+  - Nest Hub Max
+
+- The site was ran through [Am I Responsive?](https://ui.dev/amiresponsive) to visually show the the fully responsive layout which again can be seem below:
+ 
+
+![Responsive site images](wescout/static/images/readme/reponsive-site.JPG)
+
 
 
 
