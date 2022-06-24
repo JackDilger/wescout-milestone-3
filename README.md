@@ -417,6 +417,19 @@ This is very much version one of the website and there are many features I would
 - I would also like users to have the ability to document match reports on players saved to their watchlist. This would really take the player analysis to the next level and would be a key feature in growing the user base. Player performance in game is what matter the most, and it would be an essential feature to be able to keep track of players performance, so would really help in meeting out target audiences needs for this. I would use a form input which would allow a select field with a list of your watch listed players and allow free form text input to keep track match statistics. These type of reports would be unstructured data that could easily be stored in my non relational database in MONGODB. 
 
 
+### Known bugs and Fixed bugs during development
+
+
+- The site has been fully tested and their are no known bugs.
+
+Here are list of notable bugs during development: 
+    
+- The select dropdown field for regions on the add player form was not working- After looking through the code I found that I had not initialized the component with necessary JavaScript. Once this was added this bug was fixed. 
+- When adding a new player using the add player form, the player information was not being posted to my 'Players' collection which I had already created. Instead the document was being inserted in to a new collection that was automatically created called 'Player'. The fault found here was a simple spelling mistake in the add player function which was fixed by adding the plural players not player to the insert document line. 
+- When testing the site to ensure user feedback was showing for each action, I could see no feedback was showing for any action taken in the regions page by the admin user. The flash message was set up in the function but I was not returning the correct template where the flash message was being displayed. Changing this was simple by updating the URL for link to display the correct page where the flash message was shown. 
+
+
+
 
 
 
