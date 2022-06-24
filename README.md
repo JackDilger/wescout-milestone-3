@@ -429,6 +429,56 @@ Here are list of notable bugs during development:
 - When testing the site to ensure user feedback was showing for each action, I could see no feedback was showing for any action taken in the regions page by the admin user. The flash message was set up in the function but I was not returning the correct template where the flash message was being displayed. Changing this was simple by updating the URL for link to display the correct page where the flash message was shown. 
 
 
+## Deployment
+
+This app was deployed very early on during development to Heroku, and linked to GitHub so that changes made to the development environment would update on the live site as soon as they were pushed from Gitpod.
+
+Deployment was carried out as follows:
+
+1. Open project in Gitpod, and run the command *pip3 freeze --local > requirements.txt* - this creates a txt file that Heroku reads to check which dependencies are in use on the site.
+2. Create a Procfile, either manually or by running the command *echo web: python run.py > Procfile* ('run.py' should be whatever the main python file is called). **Remove any blank line from the bottom of the new Procfile and ensure these changes are pushed to Github before proceeding.**
+3. Log in (or create an account) on [Heroku](https://www.heroku.com/), select 'Create new app', fill out the name (dashes instead of spaces) of your app, your closest region, and finally click 'Create app'.
+4. Navigate to the 'Deploy' tab on the dashboard and select Github, then search for your repository and click 'connect'.
+5. Navigate to the 'Settings' tab, click 'Reveal Config Vars', and fill them out as follows:
+
+| Key         | Value
+| -----------  | ---------- 
+| IP           | 0.0.0.0
+| MONGO_DBNAME | *my_mongodb_name*
+| MONGO_URI	   | mongodb+srv://root:<*password*>@cluster0.sgi7e.mongodb.net/<*database_name*>?retryWrites=true&w=majority
+| PORT         | 5000
+| SECRET_KEY   | *my_secret_key*
+| DATABASE_URL | *postgresql URL*
+
+
+6. Return to the 'Deploy' tab and select 'Enable Automatic Deploys', ensuring that the master branch is selected.
+7. Click 'Deploy Branch' and wait for Heroku to build the app. You can monitor the progress in the 'Latest Activity' of the overview.
+8. Once the build has been completed, click 'Open app' to check that the live site is working.
+
+## Cloning
+
+To clone this project, follow these steps:
+
+1. Navigate to the main page of the repository.
+2. Click on the 'Code' dropdown and copy the command present on 'GitHub CLI'.
+3. Paste the command into the terminal on your IDE.
+4. Install the dependencies present in *requirements.txt* by running *pip3 install -r requirements.txt* in the terminal.
+5. Create a MongoDB database that includes the collections displayed in the above schema (or whatever specification you require for this clone).
+6. Create an environment python file and include the following:
+   * os.environ.setdefault("IP", "0.0.0.0")
+   * os.environ.setdefault("PORT", "5000")
+   * os.environ.setdefault("SECRET_KEY", "[SECRET KEY]")
+   * os.environ.setdefault("MONGO_URI", "[MONGO URI"])
+   * os.environ.setdefault("MONGO_DBNAME", "[YOUR DB NAME]")
+   * os.environ.setdefault("DB_URL", "postgresURL")
+
+*You will need to create your own secret key and get the uri and URL code from MongoDb* 
+
+7. At this stage you should be able to launch the preview by running 'python3 app.py' in the terminal.
+
+*Note - make sure to include your env.py file in the .gitignore file so that no sensitive information is pushed to GitHub.
+
+
 
 
 
