@@ -18,7 +18,7 @@
         <nav class="grey darken-3">
             <div class="nav-wrapper">
                 <a href="{{ url_for('get_players') }}" class="brand-logo"><i class="fa-solid fa-clipboard-user hide-on-small-and-down"></i>Wescout</a>
-                <a href="#" data-target="mobile-demo" class="sidenav-trigger"><i class="fa-solid fa-bars"></i></a>
+                <a href="#" data-target="mobile-demo" class="sidenav-trigger" aria-label="Toggle navigation menu"><i class="fa-solid fa-bars"></i></a>
                 <ul class="right hide-on-med-and-down">
                     <li><a href="{{ url_for('get_players') }}" class="nav-link">Players</a></li>
                     {% if session.user %}
