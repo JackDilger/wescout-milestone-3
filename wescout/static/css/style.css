@@ -39,19 +39,40 @@ i {
     font-size: 35px;
 }
 
-h3 {
+h1 {
     text-shadow: 1px 1px 10px #000;
     font-family: 'Fredoka One', cursive;
 }
 
-h3 span {
+h1 span {
     background-color: #50616161;
 }
 
+.flashes {
+    font-size: 3.5em;
+    width: fit-content;
+    height: fit-content;
+    background-color: #50616161;
+}
 
+.welcome-heading {
+    font-size: 2.8em;
+}
+
+.welcome-sub-heading {
+    font-size: 1.7em;
+}
+
+.profile-header {
+    font-size: 2.8em;
+}
 
 .modal .modal-footer {
     text-align: center;
+}
+
+.footer-head-text {
+    font-size: 1.6em;
 }
 
 
