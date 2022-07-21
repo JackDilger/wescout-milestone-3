@@ -121,6 +121,10 @@ a.brand-logo:hover {
     margin-top: 50px;
 }
 
+#edit-player-btn {
+    margin-top: 50px;
+}
+
 .btn:hover,
 .btn-large:hover,
 .btn-small:hover {
@@ -148,6 +152,15 @@ a.brand-logo:hover {
 }
 
 #choose-region-row {
+    margin-bottom: 50px;
+    margin-top: 100px;
+}
+
+#choose-player-rating-row-edit {
+    margin-bottom: 50px;
+}
+
+#choose-region-row-edit {
     margin-bottom: 50px;
     margin-top: 100px;
 }
