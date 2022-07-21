@@ -142,3 +142,12 @@ a.brand-logo:hover {
 #login-link:hover {
     text-decoration: underline;
 }
+
+#choose-player-rating-row {
+    margin-bottom: 50px;
+}
+
+#choose-region-row {
+    margin-bottom: 50px;
+    margin-top: 100px;
+}

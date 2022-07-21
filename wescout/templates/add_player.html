@@ -8,20 +8,6 @@
     <form class="col s12" method="POST" action="{{ url_for('add_player') }}">
         <div class="row">
             <div class="input-field col s12">
-                <i class="fa-solid fa-earth-americas prefix"></i>
-                <label for="region_name" class="white-text">
-                    Choose Region
-                    <br>
-                <select id="region_name" name="region_id" class="validate white-text" required>
-                    {% for region in regions %}
-                    <option value="{{ region.id }}">{{ region.region_name }}</option>
-                    {% endfor %}
-                </select>
-                </label>
-            </div>
-        </div>
-        <div class="row">
-            <div class="input-field col s12">
                 <i class="fa-solid fa-circle-user prefix"></i>
                 <input id="player_name" name="player_name" minlength="5" maxlength="50" type="text" class="validate white-text" required>
                 <label class="white-text" for="player_name">Player Name</label>
@@ -57,6 +43,20 @@
         </div>
         <div class="row">
             <div class="input-field col s12">
+                <i class="fa-solid fa-sterling-sign prefix"></i>
+                <input id="market_value" name="market_value" minlength="3" maxlength="50" type="text" class="validate white-text" required>
+                <label class="white-text" for="market_value">Market Value</label>
+            </div>
+        </div>
+        <div class="row">
+            <div class="input-field col s12">
+                <i class="fa-solid fa-comment prefix"></i>
+                <textarea id="player_notes" name="player_notes" minlength="5" maxlength="1000" class="materialize-textarea validate white-text" required></textarea>
+                <label class="white-text" for="player_notes">Player Notes</label>
+            </div>
+        </div>
+        <div class="row"  id="choose-player-rating-row">
+            <div class="input-field col s12">
                 <i class="fa-solid fa-star prefix"></i>
                 <label class="white-text" for="player_rating">
                     Choose Player Rating
@@ -71,18 +71,18 @@
                 </label>
             </div>
         </div>
-        <div class="row">
+        <div class="row" id="choose-region-row">
             <div class="input-field col s12">
-                <i class="fa-solid fa-sterling-sign prefix"></i>
-                <input id="market_value" name="market_value" minlength="3" maxlength="50" type="text" class="validate white-text" required>
-                <label class="white-text" for="market_value">Market Value</label>
-            </div>
-        </div>
-        <div class="row">
-            <div class="input-field col s12">
-                <i class="fa-solid fa-comment prefix"></i>
-                <textarea id="player_notes" name="player_notes" minlength="5" maxlength="1000" class="materialize-textarea validate white-text" required></textarea>
-                <label class="white-text" for="player_notes">Player Notes</label>
+                <i class="fa-solid fa-earth-americas prefix"></i>
+                <label for="region_name" class="white-text">
+                    Choose Region
+                    <br>
+                <select id="region_name" name="region_id" class="validate white-text" required>
+                    {% for region in regions %}
+                    <option value="{{ region.id }}">{{ region.region_name }}</option>
+                    {% endfor %}
+                </select>
+                </label>
             </div>
         </div>
         <div class="row">
