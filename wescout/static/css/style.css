@@ -1,156 +1,151 @@
-@import url('https://fonts.googleapis.com/css2?family=Fredoka+One&family=Roboto&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Fredoka+One&family=Roboto&display=swap");
 
 body {
-    display: flex;
-    min-height: 100vh;
-    flex-direction: column;
-    background-image: url(../images/wescout-background-image.avif);
-    background-attachment: fixed;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    font-family: 'Roboto', sans-serif;
-    color: white;
+  display: flex;
+  min-height: 100vh;
+  flex-direction: column;
+  background-image: url(../images/wescout-background-image.avif);
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  font-family: "Roboto", sans-serif;
+  color: white;
 }
 
 main {
-    flex: 1 0 auto;
+  flex: 1 0 auto;
 }
 
 nav .brand-logo {
-    margin-left: 10px;
-    font-family: 'Fredoka One', cursive;
+  margin-left: 10px;
+  font-family: "Fredoka One", cursive;
 }
 
-
 i {
-    font-size: 35px;
-    color: #3FE10E;
+  font-size: 35px;
+  color: #3fe10e;
 }
 
 .fa-solid fa-futbol {
-    font-size: 10px;
-    color: #3FE10E;
-
+  font-size: 10px;
+  color: #3fe10e;
 }
 
-
 .fa-clipboard-user {
-    font-size: 35px;
+  font-size: 35px;
 }
 
 h1 {
-    text-shadow: 1px 1px 10px #000;
-    font-family: 'Fredoka One', cursive;
+  text-shadow: 1px 1px 10px #000;
+  font-family: "Fredoka One", cursive;
 }
 
 h1 span {
-    background-color: #50616161;
+  background-color: #50616161;
 }
 
 .flashes {
-    font-size: 3.5em;
-    width: fit-content;
-    height: fit-content;
-    background-color: #50616161;
+  font-size: 3.5em;
+  width: fit-content;
+  height: fit-content;
+  background-color: #50616161;
 }
 
 .welcome-heading {
-    font-size: 2.8em;
+  font-size: 2.8em;
 }
 
 .welcome-sub-heading {
-    font-size: 1.7em;
+  font-size: 1.7em;
 }
 
 .profile-header {
-    font-size: 2.8em;
+  font-size: 2.8em;
 }
 
 .modal .modal-footer {
-    text-align: center;
+  text-align: center;
 }
 
 .footer-head-text {
-    font-size: 1.6em;
+  font-size: 1.6em;
 }
 
-
 a.nav-link:hover {
-    color: white;
-    text-decoration: underline;
+  color: white;
+  text-decoration: underline;
 }
 
 a.brand-logo:hover {
-    color: white;
-    text-decoration: underline;
+  color: white;
+  text-decoration: underline;
 }
 
-
-.dropdown-content li>a,
-.dropdown-content li>span {
-    color: #3FE10E;
+.dropdown-content li > a,
+.dropdown-content li > span {
+  color: #3fe10e;
 }
 
 .select-wrapper input.select-dropdown {
-    color: white;
+  color: white;
 }
 
-.sidenav li>a {
-    color: white;
+.sidenav li > a {
+  color: white;
 }
 
-.sidenav li>a:hover {
-    text-decoration: underline;
+.sidenav li > a:hover {
+  text-decoration: underline;
 }
 
 .sidenav {
-    background-color: #757575;
+  background-color: #757575;
 }
 
 .btn-small {
-    margin: 5px;
+  margin: 5px;
 }
 
 .collapsible-header {
-    margin: 5px;
-    line-height: 42px;
+  margin: 5px;
+  line-height: 42px;
 }
 
 #add-player-btn {
-    margin-top: 75px;
+  margin-top: 75px;
 }
 
 #edit-player-btn {
-    margin-top: 75px;
+  margin-top: 75px;
 }
 
 .btn:hover,
 .btn-large:hover,
 .btn-small:hover {
-    border: 2px solid white;
+  border: 2px solid white;
 }
 
 #register-link {
-    color: white;
+  color: white;
 }
 
 #register-link:hover {
-    text-decoration: underline;
+  text-decoration: underline;
 }
 
 #login-link {
-    color: white;
+  color: white;
 }
 
 #login-link:hover {
-    text-decoration: underline;
+  text-decoration: underline;
 }
 
 #choose-region-row {
-    margin-bottom: 100px;
+  margin-bottom: 100px;
 }
 
 #choose-region-row-edit {
-    margin-bottom: 100px;
+  margin-bottom: 100px;
 }
