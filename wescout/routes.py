@@ -4,6 +4,7 @@ from werkzeug.security import generate_password_hash, check_password_hash
 from wescout import app, db, mongo
 from wescout.models import Region, Users
 
+
 # this route displays the home page where players are shown
 @app.route("/")
 @app.route("/get_players")
@@ -11,11 +12,13 @@ def get_players():
     players = list(mongo.db.players.find())
     return render_template("players.html", players=players)
 
+
 # this route displays the regions where all scouting regions are shown
 @app.route("/regions")
 def regions():
     regions = list(Region.query.order_by(Region.region_name).all())
     return render_template("regions.html", regions=regions)
+
 
 # this route allows admin users to add a new region
 @app.route("/add_region", methods=["GET", "POST"])
@@ -33,6 +36,7 @@ def add_region():
         return redirect(url_for("regions"))
     return render_template("add_region.html")
 
+
 # this route allows admin user to edit= a region
 @app.route("/edit_region/<int:region_id>", methods=["GET", "POST"])
 def edit_region(region_id):
@@ -49,6 +53,7 @@ def edit_region(region_id):
         return redirect(url_for("regions"))
     return render_template("edit_region.html", region=region)
 
+
 # this route allows admin user to delete a new region
 @app.route("/delete_region/<int:region_id>")
 def delete_region(region_id):
@@ -63,7 +68,8 @@ def delete_region(region_id):
     flash("Region Successfully Deleted")
     return redirect(url_for("regions"))
 
-# this route allows users to add a new player 
+
+# this route allows users to add a new player
 @app.route("/add_player", methods=["GET", "POST"])
 def add_player():
     if request.method == "POST":
@@ -85,6 +91,7 @@ def add_player():
 
     regions = list(Region.query.order_by(Region.region_name).all())
     return render_template("add_player.html", regions=regions)
+
 
 # this route allows users to edit their player information
 @app.route("/edit_player/<player_id>", methods=["GET", "POST"])
@@ -115,6 +122,7 @@ def edit_player(player_id):
     regions = list(Region.query.order_by(Region.region_name).all())
     return render_template("edit_player.html", player=player, regions=regions)
 
+
 # this route allows users to delete their player information
 @app.route("/delete_player/<player_id>")
 def delete_player(player_id):
@@ -128,6 +136,7 @@ def delete_player(player_id):
     mongo.db.players.delete_one({"_id": ObjectId(player_id)})
     flash("PLayer Successfully Deleted")
     return redirect(url_for("get_players"))
+
 
 # this route allows users to register
 @app.route("/register", methods=["GET", "POST"])
@@ -153,13 +162,15 @@ def register():
 
     return render_template("register.html")
 
-# this route renders the user profile 
+
+# this route renders the user profile
 @app.route("/profile/<username>", methods=["GET", "POST"])
 def profile(username):
     if "user" in session:
         return render_template("profile.html", username=session["user"])
 
     return redirect(url_for("register"))
+
 
 # this route allows users to login
 @app.route("/login", methods=["GET", "POST"])
@@ -190,6 +201,7 @@ def login():
 
     return render_template("login.html")
 
+
 # this route allows users to logout
 @app.route("/logout")
 def logout():
@@ -197,6 +209,7 @@ def logout():
     flash("Successfully logged out")
     session.pop("user")
     return redirect(url_for("login"))
+
 
 # this route esnures only registered users can add players
 @app.route("/add_player_btn")
@@ -208,10 +221,10 @@ def add_player_btn():
 
     return render_template("add_player.html")
 
+
 # this route allows users to use the text index search
 @app.route("/search", methods=["GET", "POST"])
 def search():
     query = request.form.get("query")
     players = list(mongo.db.players.find({"$text": {"$search": query}}))
     return render_template("players.html", players=players)
-
