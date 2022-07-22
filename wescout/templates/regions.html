@@ -10,7 +10,6 @@
         </a>
     </div>
 </div>
-
 <!--All Regions-->
 <div class="row">
     {% for region in regions %}
@@ -23,7 +22,6 @@
             <div class="card-action">
                 <a href="{{ url_for('edit_region', region_id=region.id) }}" class="btn green accent-4 black-text">Edit</a>
                 <a href="#modal-{{ region.id }}" class="btn red  modal-trigger black-text">Delete</a>
-
                 <!--Delete modal-->
                 <div id="modal-{{ region.id }}" class="modal grey darken-3">
                     <div class="modal-content">
@@ -35,11 +33,9 @@
                         <a href="{{ url_for('regions') }}" id="close-modal-btn" class="modal-close btn green accent -4">Cancel</a>
                     </div>
                 </div>
-
             </div>
         </div>
     </div>
     {% endfor %}
 </div>
-
 {% endblock %}
