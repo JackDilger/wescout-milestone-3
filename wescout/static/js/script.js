@@ -16,5 +16,3 @@ document.addEventListener("DOMContentLoaded", function() {
     M.Modal.init(modal);
 });
 
-
-
