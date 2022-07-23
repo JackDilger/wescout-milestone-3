@@ -118,6 +118,7 @@ def edit_player(player_id):
         }
         mongo.db.players.replace_one({"_id": ObjectId(player_id)}, submit)
         flash("Player Successfully Updated")
+        return redirect(url_for("get_players"))
 
     regions = list(Region.query.order_by(Region.region_name).all())
     return render_template("edit_player.html", player=player, regions=regions)
