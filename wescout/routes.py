@@ -16,6 +16,11 @@ def get_players():
 # this route displays the regions where all scouting regions are shown
 @app.route("/regions")
 def regions():
+
+    if "user" not in session or session["user"] != "admin":
+        flash("You must be admin to manage regions!")
+        return redirect(url_for("players.html"))
+
     regions = list(Region.query.order_by(Region.region_name).all())
     return render_template("regions.html", regions=regions)
 
