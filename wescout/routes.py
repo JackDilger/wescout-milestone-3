@@ -89,6 +89,11 @@ def delete_region(region_id):
 # this route allows users to add a new player
 @app.route("/add_player", methods=["GET", "POST"])
 def add_player():
+
+    if "user" not in session:
+        flash("Please log in or register to add players")
+        return redirect(url_for("login"))
+
     if request.method == "POST":
         player = {
             "region_id": request.form.get("region_id"),
