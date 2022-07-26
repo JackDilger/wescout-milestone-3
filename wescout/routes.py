@@ -69,7 +69,7 @@ def edit_region(region_id):
 # this route allows admin user to delete a new region
 @app.route("/delete_region/<int:region_id>")
 def delete_region(region_id):
-    if session["user"] != "admin":
+    if "user" not in session or session["user"] != "admin":
         flash("You must be admin to manage regions!")
         return redirect(url_for("regions"))
 
