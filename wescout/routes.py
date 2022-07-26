@@ -19,7 +19,7 @@ def regions():
 
     if "user" not in session or session["user"] != "admin":
         flash("You must be admin to manage regions!")
-        return redirect(url_for("players.html"))
+        return redirect(url_for("get_players"))
 
     regions = list(Region.query.order_by(Region.region_name).all())
     return render_template("regions.html", regions=regions)
