@@ -179,6 +179,11 @@ def register():
 # this route renders the user profile
 @app.route("/profile/<username>", methods=["GET", "POST"])
 def profile(username):
+
+    if "user" not in session:
+        flash("Please log in or register to access your profile")
+        return redirect(url_for("login"))
+
     if "user" in session:
         return render_template("profile.html", username=session["user"])
 
