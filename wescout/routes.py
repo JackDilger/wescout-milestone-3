@@ -29,6 +29,11 @@ def add_region():
         return redirect(url_for("regions"))
 
     if request.method == "POST":
+        existing_region = Region.query.filter(
+            Region.region_name ==
+            request.form.get("region_name")).all()
+        if existing_region:
+            flash("Region already exists")
         region = Region(region_name=request.form.get("region_name"))
         db.session.add(region)
         db.session.commit()
@@ -37,7 +42,7 @@ def add_region():
     return render_template("add_region.html")
 
 
-# this route allows admin user to edit= a region
+# this route allows admin user to edit a region
 @app.route("/edit_region/<int:region_id>", methods=["GET", "POST"])
 def edit_region(region_id):
 
@@ -231,11 +236,13 @@ def search():
     return render_template("players.html", players=players)
 
 
+# this route handles 404 errors
 @app.errorhandler(404)
 def page_not_found(e):
     return render_template("404.html"), 404
 
 
+# this route handles 500 errors
 @app.errorhandler(500)
 def internal_server_error(e):
     return render_template("500.html"), 500
