@@ -219,6 +219,10 @@ def login():
 @app.route("/logout")
 def logout():
 
+    if "user" not in session:
+        flash("You're not logged in!")
+        return redirect(url_for("login"))
+
     flash("Successfully logged out")
     session.pop("user")
     return redirect(url_for("login"))
