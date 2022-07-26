@@ -34,6 +34,7 @@ def add_region():
             request.form.get("region_name")).all()
         if existing_region:
             flash("Region already exists")
+            return redirect(url_for("regions"))
         region = Region(region_name=request.form.get("region_name"))
         db.session.add(region)
         db.session.commit()
