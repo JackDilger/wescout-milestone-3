@@ -53,6 +53,12 @@ def edit_region(region_id):
 
     region = Region.query.get_or_404(region_id)
     if request.method == "POST":
+        existing_region = Region.query.filter(
+            Region.region_name ==
+            request.form.get("region_name")).all()
+        if existing_region:
+            flash("Region already exists")
+            return redirect(url_for("regions"))
         region.region_name = request.form.get("region_name")
         db.session.commit()
         flash("Region Successfully Updated")
