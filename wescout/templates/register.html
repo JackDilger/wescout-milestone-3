@@ -2,9 +2,10 @@
 {% block content %}
 <!--page title-->
 <h1 class="center-align"><span>Register</span></h1> 
-<!--Register form-->
 <div class="row">
+    <!--register form- component from materialize.css library which has been modified for the site needs-->
     <form class="col s12 m8 offset-m2" method="POST" action="{{ url_for('register') }}">
+        <!-- login card panel- component from materialize.css library which has been modified for the site needs-->
         <div class="card-panel grey darken-2">
             <div class="row">
                 <div class="input-field col s12">
@@ -20,11 +21,13 @@
                     <label for="password" class="white-text">Password</label>
                 </div>
             </div>
+            <!-- register button- component from materialize.css library which has been modified for the site needs -->
             <div class="row">
                 <button id="register-btn" type="submit" class="col s12 btn-large grey darken-3">
                     Register
                 </button>
             </div>
+            <!-- login link -->
             <div class="row">
                 <div class="col s12">
                     <p class="center-align">

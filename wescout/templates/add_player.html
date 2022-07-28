@@ -2,8 +2,9 @@
 {% block content %}
 <!--page title-->
 <h1 class="center-align"><span>Add Player</span></h1>
-<!--add player form-->
+<!--add player card panel- component from materialize.css library which has been modified for the site needs-->
 <div class="row card-panel grey darken-2">
+    <!--add player form- component from materialize.css library which has been modified for the site needs-->
     <form class="col s12" method="POST" action="{{ url_for('add_player') }}">
         <div class="row" id="choose-region-row">
             <div class="input-field col s12">
@@ -11,6 +12,7 @@
                 <label for="region_name" class="white-text">
                     Choose Region
                     <br>
+                <!-- region select dropdown- component from materialize.css library which has been modified for the site needs-->
                 <select id="region_name" name="region_id" class="validate white-text" required>
                     {% for region in regions %}
                     <option value="{{ region.id }}">{{ region.region_name }}</option>
@@ -74,6 +76,7 @@
                 <label class="white-text" for="player_rating">
                     Choose Player Rating
                     <br>
+                <!-- rating select dropdown- component from materialize.css library which has been modified for the site needs-->    
                 <select id="player_rating" name="player_rating" class="validate white-text" required>
                     <option value="1">1 Star</option>
                     <option value="2">2 Star</option>
@@ -84,6 +87,7 @@
                 </label>
             </div>
         </div>
+        <!--add player button- component from materialize.css library which has been modified for the site needs-->
         <div class="row">
             <div class="col s12 center-align">
                 <button type="submit" class="btn-large grey darken-3" id="add-player-btn">

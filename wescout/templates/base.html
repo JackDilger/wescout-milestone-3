@@ -4,15 +4,18 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- font awesome cdn link -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    <!-- materialize.css cdn link -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css" type="text/css">
+    <!-- Link to static css style sheet -->
     <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}" type="text/css">
+    <!-- page title -->
     <title>Wescout</title>
 </head>
 <body>
     <header>
-        <!--Nav bar-->
+        <!--Nav bar- component from materialize.css library which has been modified for the site needs-->
         <nav class="grey darken-3">
             <div class="nav-wrapper">
                 <a href="{{ url_for('get_players') }}" class="brand-logo"><i class="fa-solid fa-clipboard-user hide-on-small-and-down"></i>Wescout</a>
@@ -65,7 +68,7 @@
         {% block content %}
         {% endblock %}
     </main>
-    <!--footer-->
+    <!--footer- component from materialize.css library which has been modified for the site needs-->
     <footer class="page-footer grey darken-3 center-align">
         <div class="container">
             <div class="row">
@@ -82,7 +85,9 @@
             </div>
         </div>
     </footer>
+    <!-- script tag- materialize.css javascript -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+    <!-- script tag- static javascript -->
     <script src="{{ url_for('static', filename='js/script.js') }}"></script>
 </body>
 </html>

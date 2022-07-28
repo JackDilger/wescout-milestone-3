@@ -2,7 +2,7 @@
 {% block content %}
 <!--Page title-->
 <h1 class="center-align"><span>Scouting Region</span></h1>
-<!--Add region button-->
+<!--Add region button- component from materialize.css library which has been modified for the site needs-->
 <div class="row">
     <div class="col s12 center-align">
         <a href="{{ url_for('add_region') }}" class="btn-large grey darken-3" id="add-region-btn">
@@ -10,7 +10,7 @@
         </a>
     </div>
 </div>
-<!--All Regions-->
+<!--display all regions cards- component from materialize.css library which has been modified for the site needs-->
 <div class="row">
     {% for region in regions %}
     <div class="col s12 m6 l3">
@@ -18,16 +18,17 @@
             <div class="card-content">
                 <span class="card-title">{{ region.region_name }}</span>
             </div>
-            <!--Edit/delete buttons-->
+            <!--Edit/delete region buttons-component from materialize.css library which has been modified for the site needs-->
             <div class="card-action">
                 <a href="{{ url_for('edit_region', region_id=region.id) }}" class="btn green accent-4 black-text">Edit</a>
                 <a href="#modal-{{ region.id }}" class="btn red  modal-trigger black-text">Delete</a>
-                <!--Delete modal-->
+                <!--confirm delete modal- component from materialize.css library which has been modified for the site needs-->
                 <div id="modal-{{ region.id }}" class="modal grey darken-3">
                     <div class="modal-content">
                         <p class="white-text">Are you sure?</p>
                         <p class="white-text">Deleting a region will delete all players associated to the region<br>and cannot be undone.</p>
                     </div>
+                    <!--delete/cancel modal buttons- component from materialize.css library which has been modified for the site needs-->
                     <div class="modal-footer grey darken-3 center-align">
                         <a href="{{ url_for('delete_region', region_id=region.id) }}" id="confirm-delete-modal-btn" class="btn red">Confirm</a>
                         <a href="{{ url_for('regions') }}" id="close-modal-btn" class="modal-close btn green accent -4">Cancel</a>

@@ -2,8 +2,9 @@
 {% block content %}
 <!--page title-->
 <h1 class="center-align"><span>Edit Player</span></h1>
-<!--edit player form-->
+<!--edit player card panel- component from materialize.css library which has been modified for the site needs-->
 <div class="row card-panel grey darken-2">
+    <!--edit player form- component from materialize.css library which has been modified for the site needs-->
     <form class="col s12" method="POST" action="{{ url_for('edit_player', player_id=player._id) }}">
         <div class="row"  id="choose-region-row-edit">
             <div class="input-field col s12">
@@ -11,6 +12,7 @@
                 <label class="white-text" for="region_name">
                     Choose Region
                     <br>
+                <!-- region select dropdown- component from materialize.css library which has been modified for the site needs-->    
                 <select id="region_name" name="region_id" class="validate white-text" required>
                     {% for region in regions %}
                     {% if player.id == player.region_id | int %}
@@ -80,6 +82,7 @@
                 <label class="white-text" for="player_rating">
                     Player Rating
                     <br>
+                <!-- rating select dropdown- component from materialize.css library which has been modified for the site needs-->
                 <select id="player_rating" name="player_rating" class="validate white-text" required>
                     <option value="{{ player.player_rating }}" disabled selected>{{ player.player_rating }}</option>
                     <option value="1">1 Star</option>
@@ -91,6 +94,7 @@
                 </label>
             </div>
         </div>
+        <!--edit player button- component from materialize.css library which has been modified for the site needs-->
         <div class="row">
             <div class="col s12 center-align">
                 <button type="submit" class="btn-large grey darken-3" id="edit-player-btn">
