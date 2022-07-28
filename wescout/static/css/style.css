@@ -1,5 +1,7 @@
+/*---------------------------------------------------- google fonts imports*/
 @import url("https://fonts.googleapis.com/css2?family=Fredoka+One&family=Roboto&display=swap");
 
+/*---------------------------------------------------- general layout*/ 
 body {
   display: flex;
   min-height: 100vh;
@@ -13,38 +15,35 @@ body {
   color: white;
 }
 
+/*---------------------------------------------------- sticky footer*/
 main {
   flex: 1 0 auto;
 }
 
+/*---------------------------------------------------- nav bar logo */ 
 nav .brand-logo {
   margin-left: 10px;
   font-family: "Fredoka One", cursive;
 }
 
+/*---------------------------------------------------- general icon style */ 
 i {
   font-size: 35px;
   color: #3fe10e;
 }
 
-.fa-solid fa-futbol {
-  font-size: 10px;
-  color: #3fe10e;
-}
-
-.fa-clipboard-user {
-  font-size: 35px;
-}
-
+/*---------------------------------------------------- general h1 heading style */ 
 h1 {
   text-shadow: 1px 1px 10px #000;
   font-family: "Fredoka One", cursive;
 }
 
+/*---------------------------------------------------- h1 background color for increased visability where needed */ 
 h1 span {
   background-color: #50616161;
 }
 
+/*---------------------------------------------------- flash message style */ 
 .flashes {
   font-size: 3.5em;
   width: fit-content;
@@ -52,6 +51,7 @@ h1 span {
   background-color: #50616161;
 }
 
+/*---------------------------------------------------- targeted heading font sizes */ 
 .welcome-heading {
   font-size: 2.8em;
 }
@@ -64,12 +64,18 @@ h1 span {
   font-size: 2.8em;
 }
 
+.footer-head-text {
+  font-size: 1.6em;
+}
+
+/*---------------------------------------------------- pop up modal styles */ 
 .modal .modal-footer {
   text-align: center;
 }
 
-.footer-head-text {
-  font-size: 1.6em;
+/*---------------------------------------------------- hover selector styles */ 
+.sidenav li > a:hover {
+  text-decoration: underline;
 }
 
 a.nav-link:hover {
@@ -82,6 +88,21 @@ a.brand-logo:hover {
   text-decoration: underline;
 }
 
+.btn:hover,
+.btn-large:hover,
+.btn-small:hover {
+  border: 2px solid white;
+}
+
+#register-link:hover {
+  text-decoration: underline;
+}
+
+#login-link:hover {
+  text-decoration: underline;
+}
+
+/*---------------------------------------------------- form dropdown select styles */ 
 .dropdown-content li > a,
 .dropdown-content li > span {
   color: #3fe10e;
@@ -91,25 +112,26 @@ a.brand-logo:hover {
   color: white;
 }
 
-.sidenav li > a {
-  color: white;
+#choose-region-row {
+  margin-bottom: 100px;
 }
 
-.sidenav li > a:hover {
-  text-decoration: underline;
+#choose-region-row-edit {
+  margin-bottom: 100px;
+}
+
+/*---------------------------------------------------- sidenav styles*/ 
+.sidenav li > a {
+  color: white;
 }
 
 .sidenav {
   background-color: #757575;
 }
 
+/*----------------------------------------------------  button styles */ 
 .btn-small {
   margin: 5px;
-}
-
-.collapsible-header {
-  margin: 5px;
-  line-height: 42px;
 }
 
 #add-player-btn {
@@ -120,32 +142,17 @@ a.brand-logo:hover {
   margin-top: 75px;
 }
 
-.btn:hover,
-.btn-large:hover,
-.btn-small:hover {
-  border: 2px solid white;
+/*---------------------------------------------------- player collapsible styles */
+.collapsible-header {
+  margin: 5px;
+  line-height: 42px;
 }
 
+/*---------------------------------------------------- login/register link styles */
 #register-link {
   color: white;
 }
 
-#register-link:hover {
-  text-decoration: underline;
-}
-
 #login-link {
   color: white;
-}
-
-#login-link:hover {
-  text-decoration: underline;
-}
-
-#choose-region-row {
-  margin-bottom: 100px;
-}
-
-#choose-region-row-edit {
-  margin-bottom: 100px;
 }
