@@ -422,7 +422,9 @@ Here is a list of notable bugs during development:
     
 - The select dropdown field for regions on the add player form was not working- After looking through the code I found that I had not initialized the component with necessary JavaScript. Once this was added this bug was fixed. 
 - When adding a new player using the add player form, the player information was not being posted to my 'Players' collection which I had already created. Instead, the document was being inserted into a new collection that was automatically created called 'Player'. The fault found here was a simple spelling mistake in the add player function which was fixed by adding the plural players not player to the insert document line. 
-- When testing the site to ensure user feedback was showing for each action, I could see no feedback was showing for any action taken in the regions page by the admin user. The flash message was set up in the function, but I was not returning the correct template where the flash message was being displayed. Changing this was simple by updating the URL for link to display the correct page where the flash message was shown. 
+- When testing the site to ensure user feedback was showing for each action, I could see no feedback was showing for any action taken in the regions page by the admin user. The flash message was set up in the function, but I was not returning the correct template where the flash message was being displayed. Changing this was simple by updating the URL for link to display the correct page where the flash message was shown.
+- When a user edited a player, feedback was not instant without the user refreshing the page themselves. Added URL redirect to the players.html page where the updated information was displayed straight away.
+- If a user navigated to the logout app route whilst not being logged in already they would receive a 500 error. Added in session user check to ensure only logged in users could navigate to this route.
 
 
 ## Deployment
