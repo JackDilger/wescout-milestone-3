@@ -321,7 +321,7 @@ Console errors | No console errors showing? | Pass
 
 ### Accessibility
 
-I have used the chrome developer tool extension ‘Lighthouse’ to evaluate my sites accessibility. To provide a good user experience lighthouse recommends sites should strive to have a good score (90-100). All pages on the site reach this recommended score.
+I have used the chrome developer tool extension ‘Lighthouse’ to evaluate my sites accessibility. To provide a good user experience lighthouse recommends sites should strive to have a good score (90-100). All pages on the site have a 100% score in lighthouse.
 
 ![Lighthouse](wescout/static/images/readme/lighthouse-report.JPG)
 
