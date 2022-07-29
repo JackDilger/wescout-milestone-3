@@ -307,6 +307,7 @@ Edit Region | Can only the admin user launch the edit region form? Does the edit
 Delete Region | Does the delete region button open the deletion confirmation modal? Can only the admin user confirm deletion?
 Does deleting a region cascade delete all players part of that region? | Pass
 404 error page | Is a user taken to the 404-error page and provided with a working link back to the main site if they are directed to a non-existent page? | Pass
+500 error page | Is a user taken to the 500-error page and provided with a working link back to the main site if there is an internal server error? | Pass
 
 
 ## Deployed Version- Manual Testing
