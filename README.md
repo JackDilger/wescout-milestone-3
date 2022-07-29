@@ -417,6 +417,7 @@ This is very much version one of the website and there are many features I would
 
 
 - The site has been fully tested and there are no known bugs.
+- Adding players with the same name to database has been allowed. This is so users can see scouting notes from other users, and so they can use the site to maintain their personalised scouting lists.
 
 Here is a list of notable bugs during development: 
     
