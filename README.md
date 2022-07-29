@@ -477,7 +477,7 @@ To clone this project, follow these steps:
 
 ### Media
 
-- The background image present on the base.html template was taken from [unsplash](https://unsplash.com/photos/r-xKieMqL34)
+- The background image present on the base.html template was taken from [unsplash](https://unsplash.com/photos/7NhFrPxlgM8)
 
 ### Acknowledgements
 
