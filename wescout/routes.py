@@ -243,17 +243,6 @@ def logout():
     return redirect(url_for("login"))
 
 
-# this route esnures only registered users can add players
-@app.route("/add_player_btn")
-def add_player_btn():
-
-    if "user" not in session:
-        flash("You must regsiter to add players!")
-        return redirect(url_for("register"))
-
-    return render_template("add_player.html")
-
-
 # this route allows users to use the text index search
 @app.route("/search", methods=["GET", "POST"])
 def search():
