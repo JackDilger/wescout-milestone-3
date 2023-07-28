@@ -6,7 +6,7 @@
 
 ***
 
-[Wescout](https://github.com/JackDilger/wescout-milestone-3)  is player management database built for professionals working in the Football industry. Users of the site can discover new talent by browsing and searching for existing players and learn key information, such as market value or read more in-depth player analysis from other users. This app has a clean and intuitive interface which allows users to easily maintain player information, users can securely add, edit, and delete player data once they register for an account. 
+[Wescout](https://wescout-milestone-three.herokuapp.com/get_players)  is player management database built for professionals working in the Football industry. Users of the site can discover new talent by browsing and searching for existing players and learn key information, such as market value or read more in-depth player analysis from other users. This app has a clean and intuitive interface which allows users to easily maintain player information, users can securely add, edit, and delete player data once they register for an account. 
 
 
 ## Strategy and planning
